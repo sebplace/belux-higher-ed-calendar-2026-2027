@@ -43,6 +43,8 @@ La commande `build` régénère :
 | `timeStart` / `timeEnd` | Heures locales `HH:MM`, ou `null` si inconnues (l'événement devient alors « journée entière » dans le `.ics`). |
 | `datePrecision` | `day`, `range` ou `month`. En `month`, aucun `.ics` n'est produit : on ne fabrique pas une date qui n'existe pas. |
 | `provisional` | `true` marque la carte « Date provisoire » et le `.ics` en `STATUS:TENTATIVE`. |
+| `ics` | `false` supprime la génération du `.ics` quand la date est trop imprécise pour être posée dans un agenda (par exemple un événement de 2 jours dans une fenêtre de 5). |
+| `deadline` | Optionnel, textes `fr` / `nl` / `en`. Affiche une ligne « Inscriptions » sur la carte : date limite, condition d'accès ou clôture annoncée. |
 | `registration` | `open`, `closed` ou `contact`. Pilote le libellé du bouton. |
 | `url` | Page d'inscription, ou `mailto:` pour les événements sur contact. |
 | `language` | `null` pour « À préciser », `"en"` pour une langue **déduite** de la page officielle (affichée « à confirmer »), ou un objet `{ fr, nl, en }` pour une langue **confirmée** par l'organisateur, affichée telle quelle. |

@@ -21,7 +21,7 @@ const MONTHS = {
 
 const L = {
   fr: {
-    when: "Quand", where: "Lieu", who: "Public", lang: "Langue",
+    when: "Quand", where: "Lieu", who: "Public", lang: "Langue", deadline: "Inscriptions",
     register: "S'inscrire", details: "Voir l'événement", contact: "Contacter Microsoft",
     copy: "Copier l'invitation", ics: "Ajouter à mon agenda",
     past: "Événement terminé", closed: "Inscriptions clôturées", provisional: "Date provisoire",
@@ -31,7 +31,7 @@ const L = {
     verified: "Informations vérifiées le", tbc: "à confirmer"
   },
   nl: {
-    when: "Wanneer", where: "Locatie", who: "Doelgroep", lang: "Taal",
+    when: "Wanneer", where: "Locatie", who: "Doelgroep", lang: "Taal", deadline: "Inschrijvingen",
     register: "Registreren", details: "Bekijk het event", contact: "Contacteer Microsoft",
     copy: "Uitnodiging kopiëren", ics: "Aan mijn agenda toevoegen",
     past: "Afgelopen event", closed: "Inschrijvingen gesloten", provisional: "Voorlopige datum",
@@ -41,7 +41,7 @@ const L = {
     verified: "Informatie geverifieerd op", tbc: "te bevestigen"
   },
   en: {
-    when: "When", where: "Location", who: "Audience", lang: "Language",
+    when: "When", where: "Location", who: "Audience", lang: "Language", deadline: "Registration",
     register: "Register", details: "View event", contact: "Contact Microsoft",
     copy: "Copy invitation", ics: "Add to my calendar",
     past: "Past event", closed: "Registration closed", provisional: "Provisional date",
@@ -130,7 +130,7 @@ function island() {
       track: ev.track, theme: ev.theme, format: ev.format,
       start: ev.start, end: ev.end, url: ev.url,
       registration: ev.registration, provisional: !!ev.provisional,
-      ics: ev.datePrecision === "month" ? null : `e/${ev.id}.ics`,
+      ics: (ev.ics === false || ev.datePrecision === "month") ? null : `e/${ev.id}.ics`,
       page: `e/${ev.id}.html`, t: {}
     };
     for (const lang of LANGS) {
@@ -141,6 +141,7 @@ function island() {
         audience: ev.audience ? ev.audience[lang] : null,
         benefit: ev.benefit ? ev.benefit[lang] : null,
         language: languageLabel(ev, lang),
+        deadline: ev.deadline ? ev.deadline[lang] : null,
         theme: data.themes[ev.theme][lang],
         track: ev.track === "Research" ? L[lang].research : L[lang].general,
         format: ev.format === "online" ? L[lang].online : L[lang].onsite,
@@ -161,6 +162,8 @@ function island() {
 function card(ev) {
   const fr = L.fr;
   const chipClass = ev.track === "Research" ? "chip-res" : "chip-gen";
+  const trackLabel = ev.track === "Research" ? fr.research : fr.general;
+  const themeLabel = data.themes[ev.theme].fr;
   const status = ev.registration === "closed" ? fr.closed : (ev.provisional ? fr.provisional : null);
   const statusClass = ev.registration === "closed" ? "chip-closed" : "chip-provisional";
   const time = timeLabel(ev, "fr");
@@ -169,15 +172,17 @@ function card(ev) {
   rows.push(`          <div><dt data-i18n="l_where">${fr.where}</dt><dd data-f="venue">${esc(ev.venue.fr)}</dd></div>`);
   rows.push(`          <div><dt data-i18n="l_who">${fr.who}</dt><dd data-f="audience">${esc(ev.audience.fr)}</dd></div>`);
   rows.push(`          <div><dt data-i18n="l_lang">${fr.lang}</dt><dd data-f="language">${esc(languageLabel(ev, "fr"))}</dd></div>`);
+  if (ev.deadline) rows.push(`          <div><dt data-i18n="l_deadline">${fr.deadline}</dt><dd data-f="deadline">${esc(ev.deadline.fr)}</dd></div>`);
 
-  const icsBtn = ev.datePrecision === "month" ? "" :
+  const icsBtn = (ev.ics === false || ev.datePrecision === "month") ? "" :
     `\n          <a class="btn btn-ghost btn-sm" href="e/${ev.id}.ics" download data-f="ics">${fr.ics}</a>`;
 
   return `      <article class="card" id="${ev.id}" data-start="${ev.start}" data-end="${ev.end}" data-track="${ev.track}" data-fmt="${ev.format}" data-theme="${ev.theme}" data-reg="${ev.registration}">
         <div class="card-top">
-          <span class="chip ${chipClass}" data-f="track">${esc(ev.track === "Research" ? fr.research : fr.general)}</span>
-          <span class="chip chip-fmt" data-f="format">${esc(ev.format === "online" ? fr.online : fr.onsite)}</span>
-          <span class="chip chip-theme" data-f="theme">${esc(data.themes[ev.theme].fr)}</span>${
+          <span class="chip ${chipClass}" data-f="track">${esc(trackLabel)}</span>
+          <span class="chip chip-fmt" data-f="format">${esc(ev.format === "online" ? fr.online : fr.onsite)}</span>${
+    themeLabel === trackLabel ? "" : `
+          <span class="chip chip-theme" data-f="theme">${esc(themeLabel)}</span>`}${
     status ? `\n          <span class="chip ${statusClass}" data-f="status">${esc(status)}</span>` : ""}
         </div>
         <p class="card-date"><time datetime="${ev.datePrecision === "month" ? ev.start.slice(0, 7) : ev.start}" data-f="date">${esc(dateLabel(ev, "fr"))}</time></p>
@@ -219,7 +224,7 @@ function addDays(dateStr, n) {
 }
 
 function ics(ev) {
-  if (ev.datePrecision === "month") return null;
+  if (ev.ics === false || ev.datePrecision === "month") return null;
   const lines = [
     "BEGIN:VCALENDAR", "VERSION:2.0",
     "PRODID:-//Microsoft Belux Higher Education Calendar//FR",
@@ -259,10 +264,12 @@ function eventPage(ev) {
       venue: ev.venue[lang], audience: ev.audience[lang],
       benefit: ev.benefit ? ev.benefit[lang] : null,
       language: languageLabel(ev, lang),
+      deadline: ev.deadline ? ev.deadline[lang] : null,
       theme: data.themes[ev.theme][lang],
       format: ev.format === "online" ? L[lang].online : L[lang].onsite,
       cta: ctaLabel(ev, lang), back: L[lang].backToCalendar,
       when: L[lang].when, where: L[lang].where, who: L[lang].who, langLabel: L[lang].lang,
+      deadlineLabel: L[lang].deadline,
       ics: L[lang].ics, verified: L[lang].verified,
       status: ev.registration === "closed" ? L[lang].closed : (ev.provisional ? L[lang].provisional : null)
     };
@@ -356,8 +363,9 @@ footer{margin-block-start:26px;font-size:.9rem;color:var(--text-soft)}
   </div>
   <article class="card">
     <div class="chips">
-      <span class="chip" data-f="format">${esc(ev.format === "online" ? L.fr.online : L.fr.onsite)}</span>
-      <span class="chip" data-f="theme">${esc(data.themes[ev.theme].fr)}</span>${
+      <span class="chip" data-f="format">${esc(ev.format === "online" ? L.fr.online : L.fr.onsite)}</span>${
+    data.themes[ev.theme].fr === (ev.track === "Research" ? L.fr.research : L.fr.general) ? "" : `
+      <span class="chip" data-f="theme">${esc(data.themes[ev.theme].fr)}</span>`}${
     t.fr.status ? `\n      <span class="chip chip-status" data-f="status">${esc(t.fr.status)}</span>` : ""}
     </div>
     <p class="date"><time datetime="${ev.datePrecision === "month" ? ev.start.slice(0, 7) : ev.start}" data-f="date">${esc(dateLabel(ev, "fr"))}</time></p>
@@ -367,11 +375,13 @@ footer{margin-block-start:26px;font-size:.9rem;color:var(--text-soft)}
       <div><dt data-f="l_when">${L.fr.when}</dt><dd data-f="time">${esc(t.fr.time)}</dd></div>` : ""}
       <div><dt data-f="l_where">${L.fr.where}</dt><dd data-f="venue">${esc(ev.venue.fr)}</dd></div>
       <div><dt data-f="l_who">${L.fr.who}</dt><dd data-f="audience">${esc(ev.audience.fr)}</dd></div>
-      <div><dt data-f="l_lang">${L.fr.lang}</dt><dd data-f="language">${esc(t.fr.language)}</dd></div>
+      <div><dt data-f="l_lang">${L.fr.lang}</dt><dd data-f="language">${esc(t.fr.language)}</dd></div>${
+    ev.deadline ? `
+      <div><dt data-f="l_deadline">${L.fr.deadline}</dt><dd data-f="deadline">${esc(ev.deadline.fr)}</dd></div>` : ""}
     </dl>
     <div class="actions">
       <a class="btn" href="${esc(ev.url)}" data-f="cta">${esc(ctaLabel(ev, "fr"))}</a>${
-    ev.datePrecision === "month" ? "" : `
+    (ev.ics === false || ev.datePrecision === "month") ? "" : `
       <a class="btn btn-ghost" href="${ev.id}.ics" download data-f="ics">${L.fr.ics}</a>`}
     </div>
   </article>
@@ -383,7 +393,7 @@ footer{margin-block-start:26px;font-size:.9rem;color:var(--text-soft)}
 (function(){
   var T=${JSON.stringify(t).replace(/</g, "\\u003c")};
   var btns=[].slice.call(document.querySelectorAll(".lang"));
-  var MAP={l_when:"when",l_where:"where",l_who:"who",l_lang:"langLabel",back:"back",back2:"back"};
+  var MAP={l_when:"when",l_where:"where",l_who:"who",l_lang:"langLabel",l_deadline:"deadlineLabel",back:"back",back2:"back"};
   function draw(l){
     document.documentElement.setAttribute("lang",l);
     var d=T[l];

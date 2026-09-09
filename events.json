@@ -207,27 +207,40 @@
     },
     {
       "id": "ev-mbrc-agentic-ai",
-      "title": "MBRC event: Agentic AI for Research (selection-based)",
-      "titleOfficial": "MBRC event: Agentic AI for Research (selection-based)",
+      "title": "Agentic AI Hackathon for Research",
+      "titleOfficial": "Agentic AI Hackathon for Research",
       "track": "Research",
       "theme": "research",
       "format": "onsite",
       "start": "2026-09-29",
       "end": "2026-09-30",
-      "timeStart": null,
-      "timeEnd": null,
+      "timeStart": "09:00",
+      "timeEnd": "17:00",
       "datePrecision": "range",
-      "registration": "contact",
-      "url": "mailto:splace@microsoft.com,joclaes@microsoft.com?subject=MBRC%20Agentic%20AI%20for%20Research",
+      "registration": "open",
+      "url": "https://forms.cloud.microsoft/pages/responsepage.aspx?id=v4j5cvGGr0GRqy180BHbRzD5QF-pWZtEsoCEiWYHSHRUNVk3U1o2UDQ1ODhXUUlaNjhRRUtQUzVZRS4u&origin=lprLink&route=shorturl",
       "language": { "fr": "Anglais", "nl": "Engels", "en": "English" },
+      "deadline": {
+        "fr": "Clôture des candidatures annoncée au 31 août 2026 — contactez Jochem ou Sébastien si vous souhaitez encore participer",
+        "nl": "Aangekondigde deadline voor kandidaturen: 31 augustus 2026 — contacteer Jochem of Sébastien als u alsnog wil deelnemen",
+        "en": "Submissions announced as closing on 31 August 2026 — contact Jochem or Sébastien if you would still like to take part"
+      },
       "verified": "2026-09-09",
       "venue": {
         "fr": "Microsoft Office, Zaventem",
         "nl": "Microsoft Office, Zaventem",
         "en": "Microsoft Office, Zaventem"
       },
-      "audience": { "fr": "Recherche, RSE", "nl": "Onderzoek, RSE", "en": "Research, RSE" },
-      "benefit": null
+      "audience": {
+        "fr": "Responsables de recherche, IT et plateformes de recherche, ingénieurs data/IA, responsables innovation",
+        "nl": "Onderzoeksverantwoordelijken, onderzoeks-IT en -platformen, data-/AI-engineers, innovatieverantwoordelijken",
+        "en": "Research leaders, research IT and platform teams, data/AI engineers, innovation leads"
+      },
+      "benefit": {
+        "fr": "Deux jours pour transformer un vrai défi de recherche en prototype fonctionnel, avec GitHub Copilot, Copilot Studio et Azure AI. Chaque institution vient avec une équipe pluridisciplinaire de 4 à 5 personnes, rejointe par des ingénieurs Microsoft et des coachs partenaires.",
+        "nl": "Twee dagen om een echte onderzoeksuitdaging om te zetten in een werkend prototype, met GitHub Copilot, Copilot Studio en Azure AI. Elke instelling komt met een multidisciplinair team van 4 à 5 personen, aangevuld met Microsoft-engineers en partnercoaches.",
+        "en": "Two days to turn a real research challenge into a working prototype using GitHub Copilot, Copilot Studio and Azure AI. Each institution brings a multidisciplinary team of 4 to 5 people, joined by Microsoft engineers and partner coaches."
+      }
     },
     {
       "id": "ev-azure-programs",
@@ -323,18 +336,20 @@
     },
     {
       "id": "ev-mbrc-cambridge",
-      "title": "MBRC event: Executive Tour to Microsoft Research Cambridge",
-      "titleOfficial": "MBRC event: Executive Tour to Microsoft Research Cambridge",
+      "title": "Research Executive Briefing — Cambridge (UK)",
+      "titleOfficial": "Research Executive Briefing (Cambridge, UK)",
       "track": "Research",
       "theme": "research",
       "format": "onsite",
-      "start": "2026-11-01",
-      "end": "2026-11-30",
+      "start": "2026-11-16",
+      "end": "2026-11-20",
       "timeStart": null,
       "timeEnd": null,
-      "datePrecision": "month",
+      "datePrecision": "range",
+      "provisional": true,
+      "ics": false,
       "registration": "contact",
-      "url": "mailto:splace@microsoft.com,joclaes@microsoft.com?subject=MBRC%20Executive%20Tour%20Cambridge",
+      "url": "mailto:splace@microsoft.com,joclaes@microsoft.com?subject=Research%20Executive%20Briefing%20Cambridge",
       "language": { "fr": "Anglais", "nl": "Engels", "en": "English" },
       "verified": "2026-09-09",
       "venue": {
@@ -343,11 +358,15 @@
         "en": "Cambridge (UK)"
       },
       "audience": {
-        "fr": "Dirigeants de la recherche",
-        "nl": "Onderzoeksdirectie",
-        "en": "Research executives"
+        "fr": "VP R&D, chief scientists, directeurs de recherche, décideurs stratégie de recherche et calcul avancé",
+        "nl": "VP R&D, chief scientists, onderzoeksdirecteuren, beslissers onderzoeksstrategie en advanced computing",
+        "en": "VPs of R&D, chief scientists, research directors, research strategy and advanced computing decision-makers"
       },
-      "benefit": null
+      "benefit": {
+        "fr": "Événement de 2 jours, dates finales à confirmer dans cette fenêtre. Réception et dîner pour dirigeants le premier soir, puis briefing exécutif sur l'IA, le calcul avancé et la découverte scientifique, la vision et la roadmap Microsoft, et des échanges avec le consortium de recherche de Cambridge.",
+        "nl": "Tweedaags event, definitieve datums nog te bevestigen binnen dit venster. Netwerkreceptie en diner voor directieleden op de eerste avond, gevolgd door een executive briefing over AI, advanced computing en wetenschappelijke ontdekking, de Microsoft-visie en -roadmap, en gesprekken met het onderzoeksconsortium van Cambridge.",
+        "en": "Two-day event, final dates to be confirmed within this window. Executive networking reception and dinner on the first evening, followed by an executive briefing on AI, advanced computing and scientific discovery, Microsoft vision and roadmap, and discussions with the Cambridge research consortium."
+      }
     },
     {
       "id": "ev-ignite",
