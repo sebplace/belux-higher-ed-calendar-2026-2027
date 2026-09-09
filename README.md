@@ -47,7 +47,8 @@ La commande `build` régénère :
 | `deadline` | Optionnel, textes `fr` / `nl` / `en`. Affiche une ligne « Inscriptions » sur la carte : date limite, condition d'accès ou clôture annoncée. |
 | `registration` | `open`, `closed` ou `contact`. Pilote le libellé du bouton. |
 | `url` | Page d'inscription, ou `mailto:` pour les événements sur contact. |
-| `language` | `null` pour « À préciser », `"en"` pour une langue **déduite** de la page officielle (affichée « à confirmer »), ou un objet `{ fr, nl, en }` pour une langue **confirmée** par l'organisateur, affichée telle quelle. |
+| `language` | `null` pour « À préciser », `"en"` pour une langue **déduite** de la page officielle (affichée « à confirmer »), ou un objet `{ fr, nl, en }` pour une langue **confirmée** par l'organisateur, affichée telle quelle. Convention retenue : anglais par défaut sauf indication contraire. |
+| `infoUrl` | Optionnel, non affiché. Conserve l'URL d'origine quand le bouton a été basculé vers un contact — par exemple un formulaire dont la clôture est passée. |
 | `verified` | Date du dernier contrôle sur la page officielle. |
 | `venue` / `audience` / `benefit` | Textes `fr` / `nl` / `en`. `benefit` peut valoir `null`. |
 

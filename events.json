@@ -5,12 +5,36 @@
     "updated": "2026-09-09"
   },
   "themes": {
-    "copilot": { "fr": "Copilot & M365", "nl": "Copilot & M365", "en": "Copilot & M365" },
-    "ai": { "fr": "IA & agents", "nl": "AI & agents", "en": "AI & agents" },
-    "data": { "fr": "Data & Fabric", "nl": "Data & Fabric", "en": "Data & Fabric" },
-    "cloud": { "fr": "Cloud & modernisation", "nl": "Cloud & modernisering", "en": "Cloud & modernisation" },
-    "engagement": { "fr": "Engagement étudiant", "nl": "Studentenbetrokkenheid", "en": "Student engagement" },
-    "research": { "fr": "Recherche", "nl": "Onderzoek", "en": "Research" }
+    "copilot": {
+      "fr": "Copilot & M365",
+      "nl": "Copilot & M365",
+      "en": "Copilot & M365"
+    },
+    "ai": {
+      "fr": "IA & agents",
+      "nl": "AI & agents",
+      "en": "AI & agents"
+    },
+    "data": {
+      "fr": "Data & Fabric",
+      "nl": "Data & Fabric",
+      "en": "Data & Fabric"
+    },
+    "cloud": {
+      "fr": "Cloud & modernisation",
+      "nl": "Cloud & modernisering",
+      "en": "Cloud & modernisation"
+    },
+    "engagement": {
+      "fr": "Engagement étudiant",
+      "nl": "Studentenbetrokkenheid",
+      "en": "Student engagement"
+    },
+    "research": {
+      "fr": "Recherche",
+      "nl": "Onderzoek",
+      "en": "Research"
+    }
   },
   "events": [
     {
@@ -27,7 +51,11 @@
       "datePrecision": "day",
       "registration": "closed",
       "url": "https://msevents.microsoft.com/event?id=2107904893",
-      "language": "en",
+      "language": {
+        "fr": "Anglais",
+        "nl": "Engels",
+        "en": "English"
+      },
       "verified": "2026-09-09",
       "venue": {
         "fr": "Microsoft Office, Zaventem",
@@ -35,7 +63,7 @@
         "en": "Microsoft Office, Zaventem"
       },
       "audience": {
-        "fr": "Développeurs, AI engineers, data scientists, architectes de solutions",
+        "fr": "Profils développement, ingénierie IA, data science et architecture de solutions",
         "nl": "Developers, AI engineers, data scientists, solution architects",
         "en": "Developers, AI engineers, data scientists, solution architects"
       },
@@ -59,7 +87,11 @@
       "datePrecision": "day",
       "registration": "open",
       "url": "https://msit.events.teams.microsoft.com/event/msit.a16f7c31-fd0a-41e0-a278-02bd3a878c88@72f988bf-86f1-41af-91ab-2d7cd011db47",
-      "language": "en",
+      "language": {
+        "fr": "Anglais",
+        "nl": "Engels",
+        "en": "English"
+      },
       "verified": "2026-09-09",
       "venue": {
         "fr": "En ligne (Microsoft Teams Webinar)",
@@ -67,7 +99,7 @@
         "en": "Online (Microsoft Teams Webinar)"
       },
       "audience": {
-        "fr": "Enseignement supérieur — IT & décideurs métier",
+        "fr": "Enseignement supérieur — responsables IT & métier",
         "nl": "Hoger onderwijs — IT- en business-beslissers",
         "en": "Higher education — IT & business decision-makers"
       },
@@ -91,7 +123,11 @@
       "datePrecision": "day",
       "registration": "open",
       "url": "https://msit.events.teams.microsoft.com/event/msit.6fb7b641-4ab7-45ad-8596-26bda0131910@72f988bf-86f1-41af-91ab-2d7cd011db47",
-      "language": "en",
+      "language": {
+        "fr": "Anglais",
+        "nl": "Engels",
+        "en": "English"
+      },
       "verified": "2026-09-09",
       "venue": {
         "fr": "En ligne (Microsoft Teams Webinar)",
@@ -99,7 +135,7 @@
         "en": "Online (Microsoft Teams Webinar)"
       },
       "audience": {
-        "fr": "Enseignement supérieur — IT & décideurs métier",
+        "fr": "Enseignement supérieur — responsables IT & métier",
         "nl": "Hoger onderwijs — IT- en business-beslissers",
         "en": "Higher education — IT & business decision-makers"
       },
@@ -123,7 +159,11 @@
       "datePrecision": "day",
       "registration": "open",
       "url": "https://msit.events.teams.microsoft.com/event/msit.fc3fac9a-286a-4994-bc32-f320cbb59ba6@72f988bf-86f1-41af-91ab-2d7cd011db47",
-      "language": "en",
+      "language": {
+        "fr": "Anglais",
+        "nl": "Engels",
+        "en": "English"
+      },
       "verified": "2026-09-09",
       "venue": {
         "fr": "En ligne (Microsoft Teams Webinar)",
@@ -131,7 +171,7 @@
         "en": "Online (Microsoft Teams Webinar)"
       },
       "audience": {
-        "fr": "Enseignement supérieur — IT & décideurs métier",
+        "fr": "Enseignement supérieur — responsables IT & métier",
         "nl": "Hoger onderwijs — IT- en business-beslissers",
         "en": "Higher education — IT & business decision-makers"
       },
@@ -155,7 +195,11 @@
       "datePrecision": "day",
       "registration": "open",
       "url": "https://msit.events.teams.microsoft.com/event/msit.4896abe2-89db-4b3f-93c4-fec61915a84c@72f988bf-86f1-41af-91ab-2d7cd011db47",
-      "language": { "fr": "Français et anglais", "nl": "Frans en Engels", "en": "French and English" },
+      "language": {
+        "fr": "Français et anglais",
+        "nl": "Frans en Engels",
+        "en": "French and English"
+      },
       "verified": "2026-09-09",
       "venue": {
         "fr": "En ligne (Microsoft Teams Webinar)",
@@ -163,7 +207,7 @@
         "en": "Online (Microsoft Teams Webinar)"
       },
       "audience": {
-        "fr": "Enseignement supérieur — IT & décideurs métier",
+        "fr": "Enseignement supérieur — responsables IT & métier",
         "nl": "Hoger onderwijs — IT- en business-beslissers",
         "en": "Higher education — IT & business decision-makers"
       },
@@ -187,7 +231,11 @@
       "datePrecision": "day",
       "registration": "open",
       "url": "https://msit.events.teams.microsoft.com/event/msit.b7cc2218-c3cd-4f69-98da-6730e1bfdfea@72f988bf-86f1-41af-91ab-2d7cd011db47",
-      "language": "en",
+      "language": {
+        "fr": "Anglais",
+        "nl": "Engels",
+        "en": "English"
+      },
       "verified": "2026-09-09",
       "venue": {
         "fr": "En ligne (Microsoft Teams Webinar)",
@@ -195,7 +243,7 @@
         "en": "Online (Microsoft Teams Webinar)"
       },
       "audience": {
-        "fr": "Enseignement supérieur — IT & décideurs métier",
+        "fr": "Enseignement supérieur — responsables IT & métier",
         "nl": "Hoger onderwijs — IT- en business-beslissers",
         "en": "Higher education — IT & business decision-makers"
       },
@@ -217,13 +265,17 @@
       "timeStart": "09:00",
       "timeEnd": "17:00",
       "datePrecision": "range",
-      "registration": "open",
-      "url": "https://forms.cloud.microsoft/pages/responsepage.aspx?id=v4j5cvGGr0GRqy180BHbRzD5QF-pWZtEsoCEiWYHSHRUNVk3U1o2UDQ1ODhXUUlaNjhRRUtQUzVZRS4u&origin=lprLink&route=shorturl",
-      "language": { "fr": "Anglais", "nl": "Engels", "en": "English" },
+      "registration": "contact",
+      "url": "mailto:anothomb@microsoft.com?cc=splace@microsoft.com,joclaes@microsoft.com&subject=Agentic%20AI%20Hackathon%20for%20Research%20-%2029-30%20septembre%202026",
+      "language": {
+        "fr": "Anglais",
+        "nl": "Engels",
+        "en": "English"
+      },
       "deadline": {
-        "fr": "Clôture des candidatures annoncée au 31 août 2026 — contactez Jochem ou Sébastien si vous souhaitez encore participer",
-        "nl": "Aangekondigde deadline voor kandidaturen: 31 augustus 2026 — contacteer Jochem of Sébastien als u alsnog wil deelnemen",
-        "en": "Submissions announced as closing on 31 August 2026 — contact Jochem or Sébastien if you would still like to take part"
+        "fr": "Clôture des candidatures annoncée au 31 août 2026 — contactez Antoinette Nothomb, responsable de l'événement, pour savoir si une place reste disponible",
+        "nl": "Aangekondigde deadline voor kandidaturen: 31 augustus 2026 — contacteer Antoinette Nothomb, verantwoordelijke voor het event, om te weten of er nog een plaats vrij is",
+        "en": "Submissions announced as closing on 31 August 2026 — contact Antoinette Nothomb, the event owner, to check whether a place is still available"
       },
       "verified": "2026-09-09",
       "venue": {
@@ -232,15 +284,16 @@
         "en": "Microsoft Office, Zaventem"
       },
       "audience": {
-        "fr": "Responsables de recherche, IT et plateformes de recherche, ingénieurs data/IA, responsables innovation",
+        "fr": "Responsables de recherche, équipes IT et plateformes de recherche, profils data/IA, responsables innovation",
         "nl": "Onderzoeksverantwoordelijken, onderzoeks-IT en -platformen, data-/AI-engineers, innovatieverantwoordelijken",
         "en": "Research leaders, research IT and platform teams, data/AI engineers, innovation leads"
       },
       "benefit": {
-        "fr": "Deux jours pour transformer un vrai défi de recherche en prototype fonctionnel, avec GitHub Copilot, Copilot Studio et Azure AI. Chaque institution vient avec une équipe pluridisciplinaire de 4 à 5 personnes, rejointe par des ingénieurs Microsoft et des coachs partenaires.",
+        "fr": "Deux jours pour transformer un vrai défi de recherche en prototype fonctionnel, avec GitHub Copilot, Copilot Studio et Azure AI. Chaque institution vient avec une équipe pluridisciplinaire de 4 à 5 personnes, accompagnée par l'ingénierie Microsoft et des spécialistes partenaires.",
         "nl": "Twee dagen om een echte onderzoeksuitdaging om te zetten in een werkend prototype, met GitHub Copilot, Copilot Studio en Azure AI. Elke instelling komt met een multidisciplinair team van 4 à 5 personen, aangevuld met Microsoft-engineers en partnercoaches.",
         "en": "Two days to turn a real research challenge into a working prototype using GitHub Copilot, Copilot Studio and Azure AI. Each institution brings a multidisciplinary team of 4 to 5 people, joined by Microsoft engineers and partner coaches."
-      }
+      },
+      "infoUrl": "https://forms.cloud.microsoft/pages/responsepage.aspx?id=v4j5cvGGr0GRqy180BHbRzD5QF-pWZtEsoCEiWYHSHRUNVk3U1o2UDQ1ODhXUUlaNjhRRUtQUzVZRS4u&origin=lprLink&route=shorturl"
     },
     {
       "id": "ev-azure-programs",
@@ -256,7 +309,11 @@
       "datePrecision": "day",
       "registration": "open",
       "url": "https://msit.events.teams.microsoft.com/event/msit.b9b5d397-1989-48d0-b890-ed7639cc8d81@72f988bf-86f1-41af-91ab-2d7cd011db47",
-      "language": "en",
+      "language": {
+        "fr": "Anglais",
+        "nl": "Engels",
+        "en": "English"
+      },
       "verified": "2026-09-09",
       "venue": {
         "fr": "En ligne (Microsoft Teams Webinar)",
@@ -264,7 +321,7 @@
         "en": "Online (Microsoft Teams Webinar)"
       },
       "audience": {
-        "fr": "Décideurs IT & Cloud/AI",
+        "fr": "Responsables IT & Cloud/IA",
         "nl": "IT- en Cloud/AI-beslissers",
         "en": "IT & Cloud/AI decision-makers"
       },
@@ -288,7 +345,11 @@
       "datePrecision": "day",
       "registration": "open",
       "url": "https://msevents.microsoft.com/event?id=58643712",
-      "language": "en",
+      "language": {
+        "fr": "Anglais",
+        "nl": "Engels",
+        "en": "English"
+      },
       "verified": "2026-09-09",
       "venue": {
         "fr": "Microsoft Office, Zaventem",
@@ -296,12 +357,12 @@
         "en": "Microsoft Office, Zaventem"
       },
       "audience": {
-        "fr": "CxO, CDO, responsables data & analytics, data engineers",
+        "fr": "CxO, CDO, responsables data & analytics, profils data engineering",
         "nl": "CxO's, CDO's, data- & analyticsverantwoordelijken, data engineers",
         "en": "CxOs, CDOs, data & analytics leads, data engineers"
       },
       "benefit": {
-        "fr": "Découvrir Microsoft Fabric et la Real-Time Intelligence avec les experts et MVP locaux, en deux parcours parallèles : métier et technique.",
+        "fr": "Découvrir Microsoft Fabric et la Real-Time Intelligence avec les spécialistes et MVP de la communauté locale, en deux parcours parallèles : métier et technique.",
         "nl": "Microsoft Fabric en Real-Time Intelligence ontdekken met lokale experts en MVP's, in twee parallelle tracks: business en technisch.",
         "en": "Discover Microsoft Fabric and Real-Time Intelligence with local experts and MVPs, across two parallel tracks: business and technical."
       }
@@ -320,11 +381,19 @@
       "datePrecision": "day",
       "registration": "open",
       "url": "https://msevents.microsoft.com/event?id=2336117916",
-      "language": "en",
+      "language": {
+        "fr": "Anglais",
+        "nl": "Engels",
+        "en": "English"
+      },
       "verified": "2026-09-09",
-      "venue": { "fr": "Bruxelles", "nl": "Brussel", "en": "Brussels" },
+      "venue": {
+        "fr": "Bruxelles",
+        "nl": "Brussel",
+        "en": "Brussels"
+      },
       "audience": {
-        "fr": "Experts & administrateurs IT, décideurs IT — niveau L200-L300",
+        "fr": "Spécialistes et responsables IT — niveau L200-L300",
         "nl": "IT-experts en -beheerders, IT-beslissers — niveau L200-L300",
         "en": "IT experts and administrators, IT decision-makers — level L200-L300"
       },
@@ -350,7 +419,11 @@
       "ics": false,
       "registration": "contact",
       "url": "mailto:splace@microsoft.com,joclaes@microsoft.com?subject=Research%20Executive%20Briefing%20Cambridge",
-      "language": { "fr": "Anglais", "nl": "Engels", "en": "English" },
+      "language": {
+        "fr": "Anglais",
+        "nl": "Engels",
+        "en": "English"
+      },
       "verified": "2026-09-09",
       "venue": {
         "fr": "Cambridge (Royaume-Uni)",
@@ -358,12 +431,12 @@
         "en": "Cambridge (UK)"
       },
       "audience": {
-        "fr": "VP R&D, chief scientists, directeurs de recherche, décideurs stratégie de recherche et calcul avancé",
+        "fr": "VP R&D, chief scientists, direction de la recherche, responsables stratégie de recherche et calcul avancé",
         "nl": "VP R&D, chief scientists, onderzoeksdirecteuren, beslissers onderzoeksstrategie en advanced computing",
         "en": "VPs of R&D, chief scientists, research directors, research strategy and advanced computing decision-makers"
       },
       "benefit": {
-        "fr": "Événement de 2 jours, dates finales à confirmer dans cette fenêtre. Réception et dîner pour dirigeants le premier soir, puis briefing exécutif sur l'IA, le calcul avancé et la découverte scientifique, la vision et la roadmap Microsoft, et des échanges avec le consortium de recherche de Cambridge.",
+        "fr": "Événement de 2 jours, dates finales à confirmer dans cette fenêtre. Réception et dîner de direction le premier soir, puis briefing exécutif sur l'IA, le calcul avancé et la découverte scientifique, la vision et la roadmap Microsoft, et des échanges avec le consortium de recherche de Cambridge.",
         "nl": "Tweedaags event, definitieve datums nog te bevestigen binnen dit venster. Netwerkreceptie en diner voor directieleden op de eerste avond, gevolgd door een executive briefing over AI, advanced computing en wetenschappelijke ontdekking, de Microsoft-visie en -roadmap, en gesprekken met het onderzoeksconsortium van Cambridge.",
         "en": "Two-day event, final dates to be confirmed within this window. Executive networking reception and dinner on the first evening, followed by an executive briefing on AI, advanced computing and scientific discovery, Microsoft vision and roadmap, and discussions with the Cambridge research consortium."
       }
@@ -382,7 +455,11 @@
       "datePrecision": "range",
       "registration": "open",
       "url": "https://ignite.microsoft.com/en-US/home",
-      "language": "en",
+      "language": {
+        "fr": "Anglais",
+        "nl": "Engels",
+        "en": "English"
+      },
       "verified": "2026-09-09",
       "venue": {
         "fr": "San Francisco (Moscone Center) + en ligne",
@@ -390,12 +467,12 @@
         "en": "San Francisco (Moscone Center) + online"
       },
       "audience": {
-        "fr": "Tech-first / IT Pro, développeurs, décideurs",
+        "fr": "Profils tech et IT Pro, développement, direction",
         "nl": "Tech-first / IT Pro, developers, beslissers",
         "en": "Tech-first / IT Pro, developers, decision-makers"
       },
       "benefit": {
-        "fr": "La feuille de route IA et cloud de Microsoft en avant-première, avec ateliers, certifications et rencontres avec les experts produit.",
+        "fr": "La feuille de route IA et cloud de Microsoft en avant-première, avec ateliers, certifications et rencontres avec les équipes produit.",
         "nl": "De AI- en cloudroadmap van Microsoft als eerste ontdekken, met labs, certificeringen en ontmoetingen met productexperts.",
         "en": "See Microsoft's AI and cloud roadmap first, with labs, certifications and access to product experts."
       }
@@ -415,15 +492,27 @@
       "provisional": true,
       "registration": "contact",
       "url": "mailto:splace@microsoft.com,joclaes@microsoft.com?subject=Transforming%20Student%20Engagement%20with%20Dynamics%20365",
-      "language": null,
+      "language": {
+        "fr": "Anglais",
+        "nl": "Engels",
+        "en": "English"
+      },
       "verified": "2026-09-09",
-      "venue": { "fr": "À confirmer", "nl": "Te bevestigen", "en": "To be confirmed" },
+      "venue": {
+        "fr": "À confirmer",
+        "nl": "Te bevestigen",
+        "en": "To be confirmed"
+      },
       "audience": {
-        "fr": "Décideurs IT & métier de l'enseignement supérieur",
+        "fr": "Responsables IT & métier de l'enseignement supérieur",
         "nl": "IT- en business-beslissers hoger onderwijs",
         "en": "Higher education IT & business decision-makers"
       },
-      "benefit": null
+      "benefit": {
+        "fr": "Une matinée sur la relation étudiante à l'ère de l'IA : stratégie CRM avec Dynamics 365, services aux étudiantes et étudiants en omnicanal avec Customer Service et Contact Center, agents IA et Copilot dans les opérations, puis table ronde entre dirigeantes et dirigeants.",
+        "nl": "Een ochtend over studentrelaties in het AI-tijdperk: CRM-strategie met Dynamics 365, omnichannel studentendiensten met Customer Service en Contact Center, AI-agents en Copilot in de werking, gevolgd door een rondetafel voor directieleden.",
+        "en": "A morning on student engagement in the AI era: CRM strategy with Dynamics 365, omnichannel student services with Customer Service and Contact Center, AI agents and Copilot across operations, followed by an executive roundtable."
+      }
     }
   ]
 }
