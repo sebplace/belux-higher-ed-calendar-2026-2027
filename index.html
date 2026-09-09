@@ -5,6 +5,20 @@
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <meta name="color-scheme" content="light dark">
 <title>Microsoft Belux Event Calendar — Higher Education 2026-2027</title>
+<meta name="description" content="Événements Microsoft et partenaires pour l'enseignement supérieur et la recherche en Belgique et au Luxembourg : Copilot, IA, data, cloud et sécurité. Dates, formats et inscriptions.">
+<link rel="canonical" href="https://sebplace.github.io/belux-higher-ed-calendar-2026-2027/">
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Crect width='64' height='64' rx='14' fill='%232c6df4'/%3E%3Crect x='14' y='16' width='36' height='34' rx='6' fill='%23fff'/%3E%3Crect x='14' y='16' width='36' height='9' rx='6' fill='%238a4fe3'/%3E%3Crect x='21' y='32' width='9' height='9' rx='2' fill='%232c6df4'/%3E%3Crect x='34' y='32' width='9' height='9' rx='2' fill='%23e2557c'/%3E%3C/svg%3E">
+<meta property="og:type" content="website">
+<meta property="og:site_name" content="Microsoft Belux — Higher Education">
+<meta property="og:url" content="https://sebplace.github.io/belux-higher-ed-calendar-2026-2027/">
+<meta property="og:title" content="Event Calendar — Enseignement supérieur BeLux 2026-2027">
+<meta property="og:description" content="Les événements Microsoft et partenaires pour l'enseignement supérieur et la recherche en Belgique et au Luxembourg : Copilot, IA, data, cloud et sécurité.">
+<meta property="og:locale" content="fr_BE">
+<meta property="og:locale:alternate" content="nl_BE">
+<meta property="og:locale:alternate" content="en_GB">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:title" content="Event Calendar — Enseignement supérieur BeLux 2026-2027">
+<meta name="twitter:description" content="Les événements Microsoft et partenaires pour l'enseignement supérieur et la recherche en BeLux.">
 <style>
 :root {
   --bg: #f6f8fc;
@@ -52,9 +66,9 @@ body {
   backdrop-filter: blur(10px);
   border-block-end: 1px solid var(--border);
 }
-.langbar .wrap { display: flex; align-items: center; gap: 10px; padding-block: 8px; }
+.langbar .wrap { display: flex; flex-wrap: wrap; align-items: center; gap: 10px; padding-block: 8px; }
 .langbar .lbl { font-size: .8rem; font-weight: 600; letter-spacing: .05em; text-transform: uppercase; color: var(--text-soft); }
-.langs { display: flex; gap: 6px; margin-inline-start: auto; }
+.langs { display: flex; flex-wrap: wrap; gap: 6px; margin-inline-start: auto; }
 .lang {
   font: inherit; font-size: .84rem; font-weight: 700; cursor: pointer;
   color: var(--text-soft); background: var(--surface-2);
@@ -144,7 +158,7 @@ h2 { font-size: clamp(1.4rem, 2.4vw, 1.95rem); margin: 0; letter-spacing: -.01em
 .count { font-size: .87rem; color: var(--text-soft); margin-inline-start: auto; }
 
 /* ---------- Cards ---------- */
-.grid { display: grid; grid-template-columns: repeat(auto-fill, minmax(310px, 1fr)); gap: 18px; }
+.grid { display: grid; grid-template-columns: repeat(auto-fill, minmax(min(100%, 310px), 1fr)); gap: 18px; }
 .card {
   display: flex; flex-direction: column; gap: 10px;
   background: var(--surface); border: 1px solid var(--border); border-radius: var(--radius);
@@ -197,16 +211,79 @@ footer a { color: var(--accent); }
 
 @media (max-width: 860px) { .hero-grid { grid-template-columns: 1fr; } .hero-art { order: -1; } }
 
+/* ---------- Status chips & past events ---------- */
+.chip-past { color: #7a5200; background: rgba(242,160,61,.20); border-color: rgba(242,160,61,.45); }
+.chip-closed { color: #8a2033; background: rgba(226,85,124,.16); border-color: rgba(226,85,124,.40); }
+@media (prefers-color-scheme: dark) {
+  .chip-past { color: #ffd79a; }
+  .chip-closed { color: #ff9db5; }
+}
+.card.is-past { opacity: .72; }
+.card.is-past::before { background: var(--border); }
+.card.is-past .card-date { color: var(--text-soft); }
+.card.is-past .btn { background: var(--surface-2); color: var(--text-soft); border: 1px solid var(--border); box-shadow: none; }
+.card.is-past .btn:hover { transform: none; box-shadow: none; }
+
+/* ---------- Focus & skip link ---------- */
+:focus-visible { outline: 3px solid var(--accent); outline-offset: 3px; border-radius: 6px; }
+.lang:focus-visible, .filter:focus-visible, .btn:focus-visible { outline-offset: 4px; }
+.skip {
+  position: absolute; inset-inline-start: -9999px; inset-block-start: 0; z-index: 60;
+  background: var(--surface); color: var(--text); border: 1px solid var(--border);
+  border-radius: 0 0 12px 0; padding: 10px 18px; font-weight: 700; text-decoration: none;
+}
+.skip:focus { inset-inline-start: 0; }
+
+@media (max-width: 860px) {
+  .hero-grid { grid-template-columns: 1fr; gap: 16px; }
+  .hero { padding-block: 24px 26px; }
+  .hero-art { order: 1; }
+  .hero-art img { max-inline-size: 150px; }
+  .hero-art p { font-size: .78rem; }
+  h1 { margin: 10px 0 8px; }
+  .lede { margin-block-end: 14px; font-size: 1rem; }
+  .eyebrow { font-size: .72rem; padding: 4px 10px; }
+  section { padding-block: 30px; }
+  .sec-sub { margin-block-end: 16px; }
+  .toolbar { padding: 12px; gap: 10px; }
+  .count { margin-inline-start: 0; }
+}
+
+@media (forced-colors: active) {
+  h1 { color: CanvasText; -webkit-text-fill-color: CanvasText; background: none; }
+  .card::before, .hero::after { display: none; }
+  .card, .toolbar, .series { border: 1px solid CanvasText; }
+}
+
 @media print {
-  body { background: #fff; }
-  .hero::after, .toolbar, .langbar { display: none !important; }
-  .card, .series { box-shadow: none; break-inside: avoid; }
-  .card.is-hidden { display: flex !important; }
+  body { background: #fff !important; color: #111 !important; }
+  .hero::after, .toolbar, .langbar, .hero-actions, .hero-art, .callout, .skip { display: none !important; }
+  .hero { padding-block: 0 12px; background: none !important; border: 0; }
+  h1, h2, h3, .card-date, .meta dt, .meta dd, footer, footer p, .series, .series * {
+    color: #111 !important; -webkit-text-fill-color: #111 !important; background: none !important;
+  }
+  footer img.lockup { display: none !important; }
+  .grid { display: block !important; }
+  .card, .series { box-shadow: none; break-inside: avoid; background: #fff !important;
+    border: 1px solid #999 !important; margin-block-end: 10px; }
+  .card::before { display: none !important; }
+  .chip { border: 1px solid #999 !important; color: #111 !important; background: none !important; }
+  .card .btn { border: 0 !important; padding: 0 !important; font-weight: 400; }
+  .card.is-hidden { display: none !important; }
+  .print-all .card.is-hidden { display: flex !important; }
   a[href^="http"]::after { content: " (" attr(href) ")"; font-size: .7rem; word-break: break-all; }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  html { scroll-behavior: auto; }
+  .card, .btn, .filter, .lang { transition: none !important; }
+  .card:hover, .btn:hover { transform: none !important; }
 }
 </style>
 </head>
 <body>
+
+<a class="skip" href="#calendrier" data-i18n="skip">Aller au calendrier</a>
 
 <div class="langbar">
   <div class="wrap">
@@ -244,41 +321,43 @@ footer a { color: var(--accent); }
     <p class="sec-sub" data-i18n="sec_cal_sub">Filtrez par public cible ou par format, ou recherchez un événement. L&#x27;accès à certains événements est soumis à approbation.</p>
 
     <div class="toolbar">
-      <input type="search" id="q" data-i18n-ph="search_ph" placeholder="Rechercher un événement, un public, un lieu…" aria-label="Search">
+      <input type="search" id="q" data-i18n-ph="search_ph" placeholder="Rechercher un événement, un public, un lieu…" data-i18n-al="search_al" aria-label="Rechercher un événement">
       <div class="filters" id="filters">
         <button class="filter" type="button" data-key="track" data-value="all" aria-pressed="true" data-i18n="f_all">Tous</button>
-        <button class="filter" type="button" data-key="track" data-value="General" aria-pressed="false">General</button>
-        <button class="filter" type="button" data-key="track" data-value="Research" aria-pressed="false">Research</button>
+        <button class="filter" type="button" data-key="track" data-value="General" aria-pressed="false" data-i18n="f_general">Général</button>
+        <button class="filter" type="button" data-key="track" data-value="Research" aria-pressed="false" data-i18n="f_research">Recherche</button>
         <button class="filter" type="button" data-key="fmt" data-value="onsite" aria-pressed="false" data-i18n="f_onsite">Présentiel</button>
         <button class="filter" type="button" data-key="fmt" data-value="online" aria-pressed="false" data-i18n="f_online">En ligne</button>
+        <button class="filter" type="button" id="reset" data-i18n="f_reset">Réinitialiser</button>
       </div>
-      <span class="count" id="count"></span>
+      <span class="count" id="count" role="status" aria-live="polite" aria-atomic="true"></span>
     </div>
 
     <div class="grid" id="grid">
 
-      <article class="card" data-track="General" data-fmt="onsite" data-search="agentic governance workshop 10 septembre 2026 10 september 2026 10 september 2026 microsoft office, zaventem microsoft office, zaventem microsoft office, zaventem developers, ai engineers, solution architects developers, ai engineers, solution architects developers, ai engineers, solution architects">
+      <article class="card" id="ev-agentic-governance" data-start="2026-09-10" data-end="2026-09-10" data-track="General" data-fmt="onsite" data-search="agentic governance workshop 10 septembre 2026 10 september 2026 10 september 2026 microsoft office, zaventem microsoft office, zaventem microsoft office, zaventem developers, ai engineers, solution architects developers, ai engineers, solution architects developers, ai engineers, solution architects">
         <div class="card-top">
           <span class="chip chip-gen">General</span>
           <span class="chip chip-fmt" data-i18n="f_onsite">Présentiel</span>
+          <span class="chip chip-closed" data-i18n="st_closed">Inscriptions clôturées</span>
         </div>
-        <p class="card-date" data-i18n="ev1.date">10 septembre 2026</p>
-        <h3>Agentic Governance Workshop</h3>
+        <p class="card-date"><time datetime="2026-09-10" data-i18n="ev1.date">10 septembre 2026</time></p>
+        <h3 lang="en">Agentic Governance Workshop</h3>
         <dl class="meta">
           <div><dt data-i18n="l_when">Quand</dt><dd data-i18n="ev1.time">10.00-15.00 CEST</dd></div>
           <div><dt data-i18n="l_where">Lieu</dt><dd data-i18n="ev1.loc">Microsoft Office, Zaventem</dd></div>
           <div><dt data-i18n="l_who">Public</dt><dd data-i18n="ev1.who">Developers, AI Engineers, Solution Architects</dd></div>
         </dl>
-        <a class="btn" href="https://msevents.microsoft.com/event?id=2107904893" data-i18n="cta_register">S&#x27;inscrire</a>
+        <a class="btn" href="https://msevents.microsoft.com/event?id=2107904893" data-i18n="cta_details">Voir l&#x27;événement</a>
       </article>
 
-      <article class="card" data-track="General" data-fmt="online" data-search="m365 copilot partner introduction – delaware 15 septembre 2026 15 september 2026 15 september 2026 en ligne (microsoft teams webinar) online (microsoft teams webinar) online (microsoft teams webinar) enseignement supérieur – it &amp; décideurs métier hoger onderwijs – it- en business-beslissers higher education – it &amp; business decision-makers">
+      <article class="card" id="ev-copilot-delaware" data-start="2026-09-15" data-end="2026-09-15" data-track="General" data-fmt="online" data-search="m365 copilot partner introduction – delaware 15 septembre 2026 15 september 2026 15 september 2026 en ligne (microsoft teams webinar) online (microsoft teams webinar) online (microsoft teams webinar) enseignement supérieur – it &amp; décideurs métier hoger onderwijs – it- en business-beslissers higher education – it &amp; business decision-makers">
         <div class="card-top">
           <span class="chip chip-gen">General</span>
           <span class="chip chip-fmt" data-i18n="f_online">En ligne</span>
         </div>
-        <p class="card-date" data-i18n="ev7.date">15 septembre 2026</p>
-        <h3>M365 Copilot Partner Introduction | Delaware</h3>
+        <p class="card-date"><time datetime="2026-09-15" data-i18n="ev7.date">15 septembre 2026</time></p>
+        <h3 lang="en">M365 Copilot Partner Introduction | Delaware</h3>
         <dl class="meta">
           <div><dt data-i18n="l_when">Quand</dt><dd data-i18n="ev7.time">14h00-15h00 (CEST)</dd></div>
           <div><dt data-i18n="l_where">Lieu</dt><dd data-i18n="ev7.loc">En ligne (Microsoft Teams Webinar)</dd></div>
@@ -287,13 +366,13 @@ footer a { color: var(--accent); }
         <a class="btn" href="https://msit.events.teams.microsoft.com/event/msit.a16f7c31-fd0a-41e0-a278-02bd3a878c88@72f988bf-86f1-41af-91ab-2d7cd011db47" data-i18n="cta_register">S&#x27;inscrire</a>
       </article>
 
-      <article class="card" data-track="General" data-fmt="online" data-search="m365 copilot partner introduction – appfie 17 septembre 2026 17 september 2026 17 september 2026 en ligne (microsoft teams webinar) online (microsoft teams webinar) online (microsoft teams webinar) enseignement supérieur – it &amp; décideurs métier hoger onderwijs – it- en business-beslissers higher education – it &amp; business decision-makers">
+      <article class="card" id="ev-copilot-appfie" data-start="2026-09-17" data-end="2026-09-17" data-track="General" data-fmt="online" data-search="m365 copilot partner introduction – appfie 17 septembre 2026 17 september 2026 17 september 2026 en ligne (microsoft teams webinar) online (microsoft teams webinar) online (microsoft teams webinar) enseignement supérieur – it &amp; décideurs métier hoger onderwijs – it- en business-beslissers higher education – it &amp; business decision-makers">
         <div class="card-top">
           <span class="chip chip-gen">General</span>
           <span class="chip chip-fmt" data-i18n="f_online">En ligne</span>
         </div>
-        <p class="card-date" data-i18n="ev8.date">17 septembre 2026</p>
-        <h3>M365 Copilot Partner Introduction | Appfie</h3>
+        <p class="card-date"><time datetime="2026-09-17" data-i18n="ev8.date">17 septembre 2026</time></p>
+        <h3 lang="en">M365 Copilot Partner Introduction | Appfie</h3>
         <dl class="meta">
           <div><dt data-i18n="l_when">Quand</dt><dd data-i18n="ev8.time">14h00-15h00 (CEST)</dd></div>
           <div><dt data-i18n="l_where">Lieu</dt><dd data-i18n="ev8.loc">En ligne (Microsoft Teams Webinar)</dd></div>
@@ -302,13 +381,13 @@ footer a { color: var(--accent); }
         <a class="btn" href="https://msit.events.teams.microsoft.com/event/msit.6fb7b641-4ab7-45ad-8596-26bda0131910@72f988bf-86f1-41af-91ab-2d7cd011db47" data-i18n="cta_register">S&#x27;inscrire</a>
       </article>
 
-      <article class="card" data-track="General" data-fmt="online" data-search="m365 copilot partner introduction – cronos group 22 septembre 2026 22 september 2026 22 september 2026 en ligne (microsoft teams webinar) online (microsoft teams webinar) online (microsoft teams webinar) enseignement supérieur – it &amp; décideurs métier hoger onderwijs – it- en business-beslissers higher education – it &amp; business decision-makers">
+      <article class="card" id="ev-copilot-cronos" data-start="2026-09-22" data-end="2026-09-22" data-track="General" data-fmt="online" data-search="m365 copilot partner introduction – cronos group 22 septembre 2026 22 september 2026 22 september 2026 en ligne (microsoft teams webinar) online (microsoft teams webinar) online (microsoft teams webinar) enseignement supérieur – it &amp; décideurs métier hoger onderwijs – it- en business-beslissers higher education – it &amp; business decision-makers">
         <div class="card-top">
           <span class="chip chip-gen">General</span>
           <span class="chip chip-fmt" data-i18n="f_online">En ligne</span>
         </div>
-        <p class="card-date" data-i18n="ev9.date">22 septembre 2026</p>
-        <h3>M365 Copilot Partner Introduction | Cronos Group</h3>
+        <p class="card-date"><time datetime="2026-09-22" data-i18n="ev9.date">22 septembre 2026</time></p>
+        <h3 lang="en">M365 Copilot Partner Introduction | Cronos Group</h3>
         <dl class="meta">
           <div><dt data-i18n="l_when">Quand</dt><dd data-i18n="ev9.time">14h00-15h00 (CEST)</dd></div>
           <div><dt data-i18n="l_where">Lieu</dt><dd data-i18n="ev9.loc">En ligne (Microsoft Teams Webinar)</dd></div>
@@ -317,13 +396,13 @@ footer a { color: var(--accent); }
         <a class="btn" href="https://msit.events.teams.microsoft.com/event/msit.fc3fac9a-286a-4994-bc32-f320cbb59ba6@72f988bf-86f1-41af-91ab-2d7cd011db47" data-i18n="cta_register">S&#x27;inscrire</a>
       </article>
 
-      <article class="card" data-track="General" data-fmt="online" data-search="m365 copilot partner introduction – keyes 23 septembre 2026 23 september 2026 23 september 2026 en ligne (microsoft teams webinar) online (microsoft teams webinar) online (microsoft teams webinar) enseignement supérieur – it &amp; décideurs métier hoger onderwijs – it- en business-beslissers higher education – it &amp; business decision-makers">
+      <article class="card" id="ev-copilot-keyes" data-start="2026-09-23" data-end="2026-09-23" data-track="General" data-fmt="online" data-search="m365 copilot partner introduction – keyes 23 septembre 2026 23 september 2026 23 september 2026 en ligne (microsoft teams webinar) online (microsoft teams webinar) online (microsoft teams webinar) enseignement supérieur – it &amp; décideurs métier hoger onderwijs – it- en business-beslissers higher education – it &amp; business decision-makers">
         <div class="card-top">
           <span class="chip chip-gen">General</span>
           <span class="chip chip-fmt" data-i18n="f_online">En ligne</span>
         </div>
-        <p class="card-date" data-i18n="ev10.date">23 septembre 2026</p>
-        <h3>M365 Copilot Partner Introduction | Keyes</h3>
+        <p class="card-date"><time datetime="2026-09-23" data-i18n="ev10.date">23 septembre 2026</time></p>
+        <h3 lang="en">M365 Copilot Partner Introduction | Keyes</h3>
         <dl class="meta">
           <div><dt data-i18n="l_when">Quand</dt><dd data-i18n="ev10.time">15h00-16h00 (CEST)</dd></div>
           <div><dt data-i18n="l_where">Lieu</dt><dd data-i18n="ev10.loc">En ligne (Microsoft Teams Webinar)</dd></div>
@@ -332,13 +411,13 @@ footer a { color: var(--accent); }
         <a class="btn" href="https://msit.events.teams.microsoft.com/event/msit.4896abe2-89db-4b3f-93c4-fec61915a84c@72f988bf-86f1-41af-91ab-2d7cd011db47" data-i18n="cta_register">S&#x27;inscrire</a>
       </article>
 
-      <article class="card" data-track="General" data-fmt="online" data-search="m365 copilot partner introduction – academic software 24 septembre 2026 24 september 2026 24 september 2026 en ligne (microsoft teams webinar) online (microsoft teams webinar) online (microsoft teams webinar) enseignement supérieur – it &amp; décideurs métier hoger onderwijs – it- en business-beslissers higher education – it &amp; business decision-makers">
+      <article class="card" id="ev-copilot-academic-software" data-start="2026-09-24" data-end="2026-09-24" data-track="General" data-fmt="online" data-search="m365 copilot partner introduction – academic software 24 septembre 2026 24 september 2026 24 september 2026 en ligne (microsoft teams webinar) online (microsoft teams webinar) online (microsoft teams webinar) enseignement supérieur – it &amp; décideurs métier hoger onderwijs – it- en business-beslissers higher education – it &amp; business decision-makers">
         <div class="card-top">
           <span class="chip chip-gen">General</span>
           <span class="chip chip-fmt" data-i18n="f_online">En ligne</span>
         </div>
-        <p class="card-date" data-i18n="ev11.date">24 septembre 2026</p>
-        <h3>M365 Copilot Partner Introduction | Academic Software</h3>
+        <p class="card-date"><time datetime="2026-09-24" data-i18n="ev11.date">24 septembre 2026</time></p>
+        <h3 lang="en">M365 Copilot Partner Introduction | Academic Software</h3>
         <dl class="meta">
           <div><dt data-i18n="l_when">Quand</dt><dd data-i18n="ev11.time">14h00-15h00 (CEST)</dd></div>
           <div><dt data-i18n="l_where">Lieu</dt><dd data-i18n="ev11.loc">En ligne (Microsoft Teams Webinar)</dd></div>
@@ -347,13 +426,13 @@ footer a { color: var(--accent); }
         <a class="btn" href="https://msit.events.teams.microsoft.com/event/msit.b7cc2218-c3cd-4f69-98da-6730e1bfdfea@72f988bf-86f1-41af-91ab-2d7cd011db47" data-i18n="cta_register">S&#x27;inscrire</a>
       </article>
 
-      <article class="card" data-track="Research" data-fmt="onsite" data-search="mbrc event: agentic ai for research (selection-based) 29-30 septembre 2026 29-30 september 2026 29-30 september 2026 microsoft office, zaventem microsoft office, zaventem microsoft office, zaventem research, rse research, rse research, rse">
+      <article class="card" id="ev-mbrc-agentic-ai" data-start="2026-09-29" data-end="2026-09-30" data-track="Research" data-fmt="onsite" data-search="mbrc event: agentic ai for research (selection-based) 29-30 septembre 2026 29-30 september 2026 29-30 september 2026 microsoft office, zaventem microsoft office, zaventem microsoft office, zaventem research, rse research, rse research, rse">
         <div class="card-top">
           <span class="chip chip-res">Research</span>
           <span class="chip chip-fmt" data-i18n="f_onsite">Présentiel</span>
         </div>
-        <p class="card-date" data-i18n="ev2.date">29-30 septembre 2026</p>
-        <h3>MBRC event: Agentic AI for Research (selection-based)</h3>
+        <p class="card-date"><time datetime="2026-09-29" data-i18n="ev2.date">29-30 septembre 2026</time></p>
+        <h3 lang="en">MBRC event: Agentic AI for Research (selection-based)</h3>
         <dl class="meta">
           <div><dt data-i18n="l_where">Lieu</dt><dd data-i18n="ev2.loc">Microsoft Office, Zaventem</dd></div>
           <div><dt data-i18n="l_who">Public</dt><dd data-i18n="ev2.who">Research, RSE</dd></div>
@@ -361,28 +440,28 @@ footer a { color: var(--accent); }
         <a class="btn" href="mailto:splace@microsoft.com" data-i18n="cta_contact">Contacter Microsoft</a>
       </article>
 
-      <article class="card" data-track="General" data-fmt="online" data-search="azure cloud and ai platform: programs, benefits and funding options 29 septembre 2026 29 september 2026 29 september 2026 en ligne (microsoft teams webinar) online (microsoft teams webinar) online (microsoft teams webinar) décideurs it &amp; cloud/ai it- en cloud/ai-beslissers it &amp; cloud/ai decision-makers">
+      <article class="card" id="ev-azure-programs" data-start="2026-09-29" data-end="2026-09-29" data-track="General" data-fmt="online" data-search="azure cloud and ai platform: programs, benefits and funding options 29 septembre 2026 29 september 2026 29 september 2026 en ligne (microsoft teams webinar) online (microsoft teams webinar) online (microsoft teams webinar) décideurs it &amp; cloud/ai it- en cloud/ai-beslissers it &amp; cloud/ai decision-makers">
         <div class="card-top">
           <span class="chip chip-gen">General</span>
           <span class="chip chip-fmt" data-i18n="f_online">En ligne</span>
         </div>
-        <p class="card-date" data-i18n="ev13.date">29 septembre 2026</p>
-        <h3>Azure Cloud and AI Platform: Programs, Benefits and Funding Options</h3>
+        <p class="card-date"><time datetime="2026-09-29" data-i18n="ev13.date">29 septembre 2026</time></p>
+        <h3 lang="en">Azure Cloud and AI Platform: Programs, Benefits and Funding Options</h3>
         <dl class="meta">
-          <div><dt data-i18n="l_when">Quand</dt><dd data-i18n="ev13.time">11h00 (CET)</dd></div>
+          <div><dt data-i18n="l_when">Quand</dt><dd data-i18n="ev13.time">11h00 (CEST)</dd></div>
           <div><dt data-i18n="l_where">Lieu</dt><dd data-i18n="ev13.loc">En ligne (Microsoft Teams Webinar)</dd></div>
           <div><dt data-i18n="l_who">Public</dt><dd data-i18n="ev13.who">Décideurs IT &amp; Cloud/AI</dd></div>
         </dl>
         <a class="btn" href="https://msit.events.teams.microsoft.com/event/msit.b9b5d397-1989-48d0-b890-ed7639cc8d81@72f988bf-86f1-41af-91ab-2d7cd011db47" data-i18n="cta_register">S&#x27;inscrire</a>
       </article>
 
-      <article class="card" data-track="General" data-fmt="onsite" data-search="microsoft fabric roadshow brussels 8 octobre 2026 8 oktober 2026 8 october 2026 microsoft office, zaventem microsoft office, zaventem microsoft office, zaventem data professionals data professionals data professionals">
+      <article class="card" id="ev-fabric-roadshow" data-start="2026-10-08" data-end="2026-10-08" data-track="General" data-fmt="onsite" data-search="microsoft fabric roadshow brussels 8 octobre 2026 8 oktober 2026 8 october 2026 microsoft office, zaventem microsoft office, zaventem microsoft office, zaventem data professionals data professionals data professionals">
         <div class="card-top">
           <span class="chip chip-gen">General</span>
           <span class="chip chip-fmt" data-i18n="f_onsite">Présentiel</span>
         </div>
-        <p class="card-date" data-i18n="ev3.date">8 octobre 2026</p>
-        <h3>Microsoft Fabric Roadshow Brussels</h3>
+        <p class="card-date"><time datetime="2026-10-08" data-i18n="ev3.date">8 octobre 2026</time></p>
+        <h3 lang="en">Microsoft Fabric Roadshow Brussels</h3>
         <dl class="meta">
           <div><dt data-i18n="l_when">Quand</dt><dd data-i18n="ev3.time">09.00-18.00 CEST</dd></div>
           <div><dt data-i18n="l_where">Lieu</dt><dd data-i18n="ev3.loc">Microsoft Office, Zaventem</dd></div>
@@ -391,27 +470,28 @@ footer a { color: var(--accent); }
         <a class="btn" href="https://msevents.microsoft.com/event?id=58643712" data-i18n="cta_register">S&#x27;inscrire</a>
       </article>
 
-      <article class="card" data-track="General" data-fmt="onsite" data-search="microsoft azure modernization hack 13 octobre 2026 13 oktober 2026 13 october 2026 microsoft office, zaventem microsoft office, zaventem microsoft office, zaventem it experts and administrators, it decision-makers it-experts en -beheerders, it-beslissers it experts and administrators, it decision-makers">
+      <article class="card" id="ev-azure-modernization-hack" data-start="2026-10-13" data-end="2026-10-13" data-track="General" data-fmt="onsite" data-search="microsoft azure modernization hack 13 octobre 2026 13 oktober 2026 13 october 2026 microsoft office, zaventem microsoft office, zaventem microsoft office, zaventem it experts and administrators, it decision-makers it-experts en -beheerders, it-beslissers it experts and administrators, it decision-makers">
         <div class="card-top">
           <span class="chip chip-gen">General</span>
           <span class="chip chip-fmt" data-i18n="f_onsite">Présentiel</span>
         </div>
-        <p class="card-date" data-i18n="ev12.date">13 octobre 2026</p>
-        <h3>Microsoft Azure Modernization Hack</h3>
+        <p class="card-date"><time datetime="2026-10-13" data-i18n="ev12.date">13 octobre 2026</time></p>
+        <h3 lang="en">Microsoft Azure Modernization Hack</h3>
         <dl class="meta">
-          <div><dt data-i18n="l_where">Lieu</dt><dd data-i18n="ev12.loc">Microsoft Office, Zaventem</dd></div>
+          <div><dt data-i18n="l_when">Quand</dt><dd data-i18n="ev12.time">09h00-16h00 (CEST)</dd></div>
+          <div><dt data-i18n="l_where">Lieu</dt><dd data-i18n="ev12.loc">Bruxelles</dd></div>
           <div><dt data-i18n="l_who">Public</dt><dd data-i18n="ev12.who">Experts &amp; décideurs IT</dd></div>
         </dl>
         <a class="btn" href="https://msevents.microsoft.com/event?id=2336117916" data-i18n="cta_register">S&#x27;inscrire</a>
       </article>
 
-      <article class="card" data-track="Research" data-fmt="onsite" data-search="mbrc event: executive tour to microsoft research cambridge novembre 2026 november 2026 november 2026 cambridge (royaume-uni) cambridge (vk) cambridge (uk) research executives research executives research executives">
+      <article class="card" id="ev-mbrc-cambridge" data-start="2026-11-01" data-end="2026-11-30" data-track="Research" data-fmt="onsite" data-search="mbrc event: executive tour to microsoft research cambridge novembre 2026 november 2026 november 2026 cambridge (royaume-uni) cambridge (vk) cambridge (uk) research executives research executives research executives">
         <div class="card-top">
           <span class="chip chip-res">Research</span>
           <span class="chip chip-fmt" data-i18n="f_onsite">Présentiel</span>
         </div>
-        <p class="card-date" data-i18n="ev4.date">novembre 2026</p>
-        <h3>MBRC event: Executive Tour to Microsoft Research Cambridge</h3>
+        <p class="card-date"><time datetime="2026-11" data-i18n="ev4.date">novembre 2026</time></p>
+        <h3 lang="en">MBRC event: Executive Tour to Microsoft Research Cambridge</h3>
         <dl class="meta">
           <div><dt data-i18n="l_where">Lieu</dt><dd data-i18n="ev4.loc">Cambridge (Royaume-Uni)</dd></div>
           <div><dt data-i18n="l_who">Public</dt><dd data-i18n="ev4.who">Research Executives</dd></div>
@@ -419,27 +499,27 @@ footer a { color: var(--accent); }
         <a class="btn" href="mailto:splace@microsoft.com" data-i18n="cta_contact">Contacter Microsoft</a>
       </article>
 
-      <article class="card" data-track="General" data-fmt="online" data-search="microsoft ignite: tech conference 17-20 novembre 2026 17-20 november 2026 17-20 november 2026 en ligne online online tech-first / it pro tech-first / it pro tech-first / it pro">
+      <article class="card" id="ev-ignite" data-start="2026-11-17" data-end="2026-11-20" data-track="General" data-fmt="online" data-search="microsoft ignite: tech conference 17-20 novembre 2026 17-20 november 2026 17-20 november 2026 en ligne online online tech-first / it pro tech-first / it pro tech-first / it pro">
         <div class="card-top">
           <span class="chip chip-gen">General</span>
           <span class="chip chip-fmt" data-i18n="f_online">En ligne</span>
         </div>
-        <p class="card-date" data-i18n="ev5.date">17-20 novembre 2026</p>
-        <h3>Microsoft Ignite: Tech Conference</h3>
+        <p class="card-date"><time datetime="2026-11-17" data-i18n="ev5.date">17-20 novembre 2026</time></p>
+        <h3 lang="en">Microsoft Ignite: Tech Conference</h3>
         <dl class="meta">
-          <div><dt data-i18n="l_where">Lieu</dt><dd data-i18n="ev5.loc">En ligne</dd></div>
+          <div><dt data-i18n="l_where">Lieu</dt><dd data-i18n="ev5.loc">San Francisco + en ligne</dd></div>
           <div><dt data-i18n="l_who">Public</dt><dd data-i18n="ev5.who">Tech-first / IT Pro</dd></div>
         </dl>
         <a class="btn" href="https://ignite.microsoft.com/en-US/home" data-i18n="cta_register">S&#x27;inscrire</a>
       </article>
 
-      <article class="card" data-track="General" data-fmt="onsite" data-search="transforming student engagement with dynamics 365 crm, contact center &amp; ai 2 décembre 2026 (à confirmer) 2 december 2026 (te bevestigen) 2 december 2026 (to be confirmed) à confirmer te bevestigen to be confirmed décideurs it &amp; métier de l'enseignement supérieur it- en business-beslissers hoger onderwijs higher education it &amp; business decision-makers">
+      <article class="card" id="ev-dynamics-student-engagement" data-start="2026-12-02" data-end="2026-12-02" data-provisional="true" data-track="General" data-fmt="onsite" data-search="transforming student engagement with dynamics 365 crm, contact center &amp; ai 2 décembre 2026 (à confirmer) 2 december 2026 (te bevestigen) 2 december 2026 (to be confirmed) à confirmer te bevestigen to be confirmed décideurs it &amp; métier de l'enseignement supérieur it- en business-beslissers hoger onderwijs higher education it &amp; business decision-makers">
         <div class="card-top">
           <span class="chip chip-gen">General</span>
           <span class="chip chip-fmt" data-i18n="f_onsite">Présentiel</span>
         </div>
-        <p class="card-date" data-i18n="ev6.date">2 décembre 2026 (à confirmer)</p>
-        <h3>Transforming Student Engagement with Dynamics 365 CRM, Contact Center &amp; AI</h3>
+        <p class="card-date"><time datetime="2026-12-02" data-i18n="ev6.date">2 décembre 2026 (à confirmer)</time></p>
+        <h3 lang="en">Transforming Student Engagement with Dynamics 365 CRM, Contact Center &amp; AI</h3>
         <dl class="meta">
           <div><dt data-i18n="l_when">Quand</dt><dd data-i18n="ev6.time">09h00-12h00 (à confirmer)</dd></div>
           <div><dt data-i18n="l_where">Lieu</dt><dd data-i18n="ev6.loc">À confirmer</dd></div>
@@ -487,16 +567,151 @@ footer a { color: var(--accent); }
 <script>
 (function () {
   var I18N = {"fr": {"eyebrow": "Microsoft Belux · Enseignement supérieur", "h1a": "Event Calendar", "h1b": "Enseignement supérieur 2026-2027", "lede": "Les événements Microsoft confirmés pour l'enseignement supérieur et la recherche en Belgique et au Luxembourg.", "cta_cal": "Voir le calendrier", "cta_soon": "Prochainement", "hero_caption": "Jochem & Sébastien — vos contacts Microsoft Belux", "sec_cal": "Calendrier des événements", "sec_cal_sub": "Filtrez par public cible ou par format, ou recherchez un événement. L'accès à certains événements est soumis à approbation.", "search_ph": "Rechercher un événement, un public, un lieu…", "f_all": "Tous", "f_onsite": "Présentiel", "f_online": "En ligne", "count_one": "événement affiché", "count_many": "événements affichés", "empty": "Aucun événement ne correspond à votre recherche.", "l_when": "Quand", "l_where": "Lieu", "l_who": "Public", "cta_register": "S'inscrire", "cta_contact": "Contacter Microsoft", "sec_soon": "Prochainement", "sec_soon_sub": "D'autres sessions — webinaires Teams, workshops en présentiel et parcours de skilling IA — viendront compléter ce calendrier. Elles seront ajoutées ici dès qu'elles seront confirmées.", "soon_h": "Sessions à confirmer", "soon_p": "Aucune date confirmée à ce jour. Contactez Jochem ou Sébastien pour être informé en priorité de l'ouverture des inscriptions.", "soon_btn": "Être tenu informé", "callout_h": "Passez à la pratique", "callout_p": "Testez Microsoft 365 Copilot Chat dès maintenant.", "callout_btn": "Ouvrir Copilot Chat", "foot_update": "Dernière mise à jour du document source : 14/08/2026. L'agenda peut être modifié. L'accès aux événements peut être soumis à approbation.", "foot_links_pre": "Retrouvez tous les événements Microsoft externes via ", "foot_links_mid": " et toutes les formations via ", "foot_note": "Page générée à partir de « Microsoft Belux Event Calendar Higher Education 2026_EXTERNAL ».", "lang_label": "Langue", "ev1.date": "10 septembre 2026", "ev1.loc": "Microsoft Office, Zaventem", "ev1.who": "Developers, AI Engineers, Solution Architects", "ev1.time": "10.00-15.00 CEST", "ev2.date": "29-30 septembre 2026", "ev2.loc": "Microsoft Office, Zaventem", "ev2.who": "Research, RSE", "ev3.date": "8 octobre 2026", "ev3.loc": "Microsoft Office, Zaventem", "ev3.who": "Data Professionals", "ev3.time": "09.00-18.00 CEST", "ev4.date": "novembre 2026", "ev4.loc": "Cambridge (Royaume-Uni)", "ev4.who": "Research Executives", "ev5.date": "17-20 novembre 2026", "ev5.loc": "En ligne", "ev5.who": "Tech-first / IT Pro", "ev6.date": "2 décembre 2026 (à confirmer)", "ev6.time": "09h00-12h00 (à confirmer)", "ev6.loc": "À confirmer", "ev6.who": "Décideurs IT & métier de l'enseignement supérieur", "ev7.date": "15 septembre 2026", "ev7.time": "14h00-15h00 (CEST)", "ev7.loc": "En ligne (Microsoft Teams Webinar)", "ev7.who": "Enseignement supérieur — IT & décideurs métier", "ev8.date": "17 septembre 2026", "ev8.time": "14h00-15h00 (CEST)", "ev8.loc": "En ligne (Microsoft Teams Webinar)", "ev8.who": "Enseignement supérieur — IT & décideurs métier", "ev9.date": "22 septembre 2026", "ev9.time": "14h00-15h00 (CEST)", "ev9.loc": "En ligne (Microsoft Teams Webinar)", "ev9.who": "Enseignement supérieur — IT & décideurs métier", "ev10.date": "23 septembre 2026", "ev10.time": "15h00-16h00 (CEST)", "ev10.loc": "En ligne (Microsoft Teams Webinar)", "ev10.who": "Enseignement supérieur — IT & décideurs métier", "ev11.date": "24 septembre 2026", "ev11.time": "14h00-15h00 (CEST)", "ev11.loc": "En ligne (Microsoft Teams Webinar)", "ev11.who": "Enseignement supérieur — IT & décideurs métier", "ev12.date": "13 octobre 2026", "ev12.loc": "Microsoft Office, Zaventem", "ev12.who": "Experts & décideurs IT", "ev13.date": "29 septembre 2026", "ev13.time": "11h00 (CET)", "ev13.loc": "En ligne (Microsoft Teams Webinar)", "ev13.who": "Décideurs IT & Cloud/AI"}, "nl": {"eyebrow": "Microsoft Belux · Hoger onderwijs", "h1a": "Event Calendar", "h1b": "Hoger onderwijs 2026-2027", "lede": "De bevestigde Microsoft-events voor hoger onderwijs en onderzoek in België en Luxemburg.", "cta_cal": "Bekijk de kalender", "cta_soon": "Binnenkort", "hero_caption": "Jochem & Sébastien — uw Microsoft Belux-contacten", "sec_cal": "Eventkalender", "sec_cal_sub": "Filter op doelgroep of formaat, of zoek een event. Toegang tot sommige events is onderworpen aan goedkeuring.", "search_ph": "Zoek een event, doelgroep of locatie…", "f_all": "Alle", "f_onsite": "Ter plaatse", "f_online": "Online", "count_one": "event getoond", "count_many": "events getoond", "empty": "Geen enkel event komt overeen met uw zoekopdracht.", "l_when": "Wanneer", "l_where": "Locatie", "l_who": "Doelgroep", "cta_register": "Registreren", "cta_contact": "Contacteer Microsoft", "sec_soon": "Binnenkort", "sec_soon_sub": "Meer sessies — Teams-webinars, workshops ter plaatse en AI-skillingtrajecten — vullen deze kalender later aan. Ze verschijnen hier zodra ze bevestigd zijn.", "soon_h": "Nog te bevestigen sessies", "soon_p": "Voorlopig geen bevestigde datums. Contacteer Jochem of Sébastien om als eerste op de hoogte te zijn wanneer de inschrijvingen openen.", "soon_btn": "Houd mij op de hoogte", "callout_h": "Ga zelf aan de slag", "callout_p": "Test Microsoft 365 Copilot Chat meteen uit.", "callout_btn": "Copilot Chat openen", "foot_update": "Laatste update van het brondocument: 14/08/2026. De agenda kan wijzigen. Toegang tot events kan onderworpen zijn aan goedkeuring.", "foot_links_pre": "Alle externe Microsoft-events vindt u via ", "foot_links_mid": " en alle opleidingen via ", "foot_note": "Pagina gegenereerd op basis van “Microsoft Belux Event Calendar Higher Education 2026_EXTERNAL”.", "lang_label": "Taal", "ev1.date": "10 september 2026", "ev1.loc": "Microsoft Office, Zaventem", "ev1.who": "Developers, AI Engineers, Solution Architects", "ev1.time": "10.00-15.00 CEST", "ev2.date": "29-30 september 2026", "ev2.loc": "Microsoft Office, Zaventem", "ev2.who": "Research, RSE", "ev3.date": "8 oktober 2026", "ev3.loc": "Microsoft Office, Zaventem", "ev3.who": "Data Professionals", "ev3.time": "09.00-18.00 CEST", "ev4.date": "november 2026", "ev4.loc": "Cambridge (VK)", "ev4.who": "Research Executives", "ev5.date": "17-20 november 2026", "ev5.loc": "Online", "ev5.who": "Tech-first / IT Pro", "ev6.date": "2 december 2026 (te bevestigen)", "ev6.time": "09.00-12.00 (te bevestigen)", "ev6.loc": "Te bevestigen", "ev6.who": "IT- en business-beslissers hoger onderwijs", "ev7.date": "15 september 2026", "ev7.time": "14.00-15.00 (CEST)", "ev7.loc": "Online (Microsoft Teams Webinar)", "ev7.who": "Hoger onderwijs — IT- en business-beslissers", "ev8.date": "17 september 2026", "ev8.time": "14.00-15.00 (CEST)", "ev8.loc": "Online (Microsoft Teams Webinar)", "ev8.who": "Hoger onderwijs — IT- en business-beslissers", "ev9.date": "22 september 2026", "ev9.time": "14.00-15.00 (CEST)", "ev9.loc": "Online (Microsoft Teams Webinar)", "ev9.who": "Hoger onderwijs — IT- en business-beslissers", "ev10.date": "23 september 2026", "ev10.time": "15.00-16.00 (CEST)", "ev10.loc": "Online (Microsoft Teams Webinar)", "ev10.who": "Hoger onderwijs — IT- en business-beslissers", "ev11.date": "24 september 2026", "ev11.time": "14.00-15.00 (CEST)", "ev11.loc": "Online (Microsoft Teams Webinar)", "ev11.who": "Hoger onderwijs — IT- en business-beslissers", "ev12.date": "13 oktober 2026", "ev12.loc": "Microsoft Office, Zaventem", "ev12.who": "IT-experts en -beslissers", "ev13.date": "29 september 2026", "ev13.time": "11.00 (CET)", "ev13.loc": "Online (Microsoft Teams Webinar)", "ev13.who": "IT- en Cloud/AI-beslissers"}, "en": {"eyebrow": "Microsoft Belux · Higher Education", "h1a": "Event Calendar", "h1b": "Higher Education 2026-2027", "lede": "Confirmed Microsoft events for higher education and research in Belgium and Luxembourg.", "cta_cal": "View the calendar", "cta_soon": "Coming soon", "hero_caption": "Jochem & Sébastien — your Microsoft Belux contacts", "sec_cal": "Event calendar", "sec_cal_sub": "Filter by audience or format, or search for an event. Access to some events is subject to approval.", "search_ph": "Search an event, audience or location…", "f_all": "All", "f_onsite": "In person", "f_online": "Online", "count_one": "event shown", "count_many": "events shown", "empty": "No event matches your search.", "l_when": "When", "l_where": "Location", "l_who": "Audience", "cta_register": "Register", "cta_contact": "Contact Microsoft", "sec_soon": "Coming soon", "sec_soon_sub": "More sessions — Teams webinars, in-person workshops and AI skilling tracks — will complete this calendar. They will appear here once confirmed.", "soon_h": "Sessions to be confirmed", "soon_p": "No confirmed dates yet. Contact Jochem or Sébastien to be the first to know when registration opens.", "soon_btn": "Keep me posted", "callout_h": "Start practising", "callout_p": "Try Microsoft 365 Copilot Chat right now.", "callout_btn": "Open Copilot Chat", "foot_update": "Source document last updated: 14/08/2026. The agenda may change. Access to events may be subject to approval.", "foot_links_pre": "Find all external Microsoft events via ", "foot_links_mid": " and all training via ", "foot_note": "Page generated from “Microsoft Belux Event Calendar Higher Education 2026_EXTERNAL”.", "lang_label": "Language", "ev1.date": "10 September 2026", "ev1.loc": "Microsoft Office, Zaventem", "ev1.who": "Developers, AI Engineers, Solution Architects", "ev1.time": "10.00-15.00 CEST", "ev2.date": "29-30 September 2026", "ev2.loc": "Microsoft Office, Zaventem", "ev2.who": "Research, RSE", "ev3.date": "8 October 2026", "ev3.loc": "Microsoft Office, Zaventem", "ev3.who": "Data Professionals", "ev3.time": "09.00-18.00 CEST", "ev4.date": "November 2026", "ev4.loc": "Cambridge (UK)", "ev4.who": "Research Executives", "ev5.date": "17-20 November 2026", "ev5.loc": "Online", "ev5.who": "Tech-first / IT Pro", "ev6.date": "2 December 2026 (to be confirmed)", "ev6.time": "09:00-12:00 (to be confirmed)", "ev6.loc": "To be confirmed", "ev6.who": "Higher education IT & business decision-makers", "ev7.date": "15 September 2026", "ev7.time": "14:00-15:00 (CEST)", "ev7.loc": "Online (Microsoft Teams Webinar)", "ev7.who": "Higher education — IT & business decision-makers", "ev8.date": "17 September 2026", "ev8.time": "14:00-15:00 (CEST)", "ev8.loc": "Online (Microsoft Teams Webinar)", "ev8.who": "Higher education — IT & business decision-makers", "ev9.date": "22 September 2026", "ev9.time": "14:00-15:00 (CEST)", "ev9.loc": "Online (Microsoft Teams Webinar)", "ev9.who": "Higher education — IT & business decision-makers", "ev10.date": "23 September 2026", "ev10.time": "15:00-16:00 (CEST)", "ev10.loc": "Online (Microsoft Teams Webinar)", "ev10.who": "Higher education — IT & business decision-makers", "ev11.date": "24 September 2026", "ev11.time": "14:00-15:00 (CEST)", "ev11.loc": "Online (Microsoft Teams Webinar)", "ev11.who": "Higher education — IT & business decision-makers", "ev12.date": "13 October 2026", "ev12.loc": "Microsoft Office, Zaventem", "ev12.who": "IT experts and decision-makers", "ev13.date": "29 September 2026", "ev13.time": "11:00 AM (CET)", "ev13.loc": "Online (Microsoft Teams Webinar)", "ev13.who": "IT & Cloud/AI decision-makers"}};
+  var LANGS = ["fr", "nl", "en"];
   var lang = "fr";
+
+  var I18N_EXTRA = {
+    fr: {
+      skip: "Aller au calendrier",
+      search_al: "Rechercher un événement",
+      f_general: "Général",
+      f_research: "Recherche",
+      f_reset: "Réinitialiser",
+      st_past: "Événement terminé",
+      st_closed: "Inscriptions clôturées",
+      cta_details: "Voir l'événement",
+      lede: "Une sélection d'événements Microsoft et partenaires pour l'enseignement supérieur et la recherche en Belgique et au Luxembourg : Copilot, IA, data, cloud et sécurité. Les dates provisoires sont signalées sur chaque carte.",
+      soon_p: "D'autres sessions sont en préparation. Contactez Jochem ou Sébastien pour être informé en priorité de l'ouverture des inscriptions.",
+      foot_update: "Page mise à jour le 09/09/2026 · Document source : 14/08/2026. L'agenda peut être modifié. L'accès aux événements peut être soumis à approbation.",
+      "ev5.loc": "San Francisco + en ligne",
+      "ev12.time": "09h00-16h00 (CEST)",
+      "ev12.loc": "Bruxelles",
+      "ev13.time": "11h00 (CEST)"
+    },
+    nl: {
+      skip: "Ga naar de kalender",
+      search_al: "Zoek een event",
+      f_general: "Algemeen",
+      f_research: "Onderzoek",
+      f_reset: "Herstellen",
+      st_past: "Afgelopen event",
+      st_closed: "Inschrijvingen gesloten",
+      cta_details: "Bekijk het event",
+      lede: "Een selectie van Microsoft- en partnerevents voor hoger onderwijs en onderzoek in België en Luxemburg: Copilot, AI, data, cloud en security. Voorlopige datums staan aangeduid op elke kaart.",
+      soon_p: "Er zijn nog meer sessies in voorbereiding. Contacteer Jochem of Sébastien om als eerste op de hoogte te zijn wanneer de inschrijvingen openen.",
+      foot_update: "Pagina bijgewerkt op 09/09/2026 · Brondocument: 14/08/2026. De agenda kan wijzigen. Toegang tot events kan onderworpen zijn aan goedkeuring.",
+      "ev5.loc": "San Francisco + online",
+      "ev12.time": "09.00-16.00 (CEST)",
+      "ev12.loc": "Brussel",
+      "ev13.time": "11.00 (CEST)"
+    },
+    en: {
+      skip: "Skip to the calendar",
+      search_al: "Search an event",
+      f_general: "General",
+      f_research: "Research",
+      f_reset: "Reset",
+      st_past: "Past event",
+      st_closed: "Registration closed",
+      cta_details: "View event",
+      lede: "A selection of Microsoft and partner events for higher education and research in Belgium and Luxembourg: Copilot, AI, data, cloud and security. Provisional dates are flagged on each card.",
+      soon_p: "More sessions are being prepared. Contact Jochem or Sébastien to be the first to know when registration opens.",
+      foot_update: "Page updated on 09/09/2026 · Source document: 14/08/2026. The agenda may change. Access to events may be subject to approval.",
+      "ev5.loc": "San Francisco + online",
+      "ev12.time": "09:00 AM-04:00 PM (CEST)",
+      "ev12.loc": "Brussels",
+      "ev13.time": "11:00 AM (CEST)"
+    }
+  };
+
+  LANGS.forEach(function (l) {
+    Object.keys(I18N_EXTRA[l]).forEach(function (k) { I18N[l][k] = I18N_EXTRA[l][k]; });
+  });
+
   var state = { track: "all", fmt: "all", q: "" };
 
   var grid = document.getElementById("grid");
   var cards = Array.prototype.slice.call(grid.querySelectorAll(".card"));
   var countEl = document.getElementById("count");
   var emptyEl = document.getElementById("empty");
-  var filterBtns = Array.prototype.slice.call(document.querySelectorAll(".filter"));
+  var filterBtns = Array.prototype.slice.call(document.querySelectorAll(".filter[data-key]"));
+  var resetBtn = document.getElementById("reset");
   var langBtns = Array.prototype.slice.call(document.querySelectorAll(".lang"));
   var search = document.getElementById("q");
+
+  function fold(s) {
+    return (s || "").toString().toLowerCase()
+      .normalize("NFD").replace(/[\u0300-\u036f]/g, "")
+      .replace(/[^a-z0-9]+/g, " ").trim();
+  }
+
+  var SYN = {
+    ai: "ia intelligence artificielle artificiele intelligentie artificial intelligence agents",
+    copilot: "copilot m365 microsoft 365 productivite productiviteit",
+    research: "recherche onderzoek research",
+    fabric: "data donnees gegevens analytics power bi",
+    azure: "cloud infrastructure infrastructuur",
+    dynamics: "crm relation client klantrelatie",
+    governance: "gouvernance governance securite beveiliging compliance",
+    ignite: "conference conferentie tech"
+  };
+
+  function cardIndex(card) {
+    var parts = [card.textContent, card.dataset.search || "", card.id || ""];
+    Array.prototype.forEach.call(card.querySelectorAll("[data-i18n]"), function (el) {
+      var k = el.getAttribute("data-i18n");
+      LANGS.forEach(function (l) { if (I18N[l] && I18N[l][k]) parts.push(I18N[l][k]); });
+    });
+    parts.push(card.dataset.track === "Research" ? "research recherche onderzoek" : "general algemeen");
+    parts.push(card.dataset.fmt === "online"
+      ? "en ligne online webinar teams a distance op afstand"
+      : "presentiel ter plaatse in person onsite sur place");
+    var idx = fold(parts.join(" "));
+    Object.keys(SYN).forEach(function (key) {
+      if (new RegExp("\\b" + key + "\\b").test(idx)) idx += " " + fold(SYN[key]);
+    });
+    return " " + idx + " ";
+  }
+
+  function matchesQuery(card) {
+    var tokens = fold(state.q).split(" ").filter(Boolean);
+    if (!tokens.length) return true;
+    return tokens.every(function (t) {
+      return t.length <= 2
+        ? new RegExp("\\b" + t + "\\b").test(card._idx)
+        : card._idx.indexOf(t) !== -1;
+    });
+  }
+
+  var today = new Date();
+  today.setHours(0, 0, 0, 0);
+
+  function isPast(card) {
+    var end = card.dataset.end;
+    if (!end) return false;
+    var d = new Date(end + "T23:59:59");
+    return !isNaN(d.getTime()) && d < today;
+  }
+
+  cards.forEach(function (c) {
+    if (!isPast(c)) return;
+    c.classList.add("is-past");
+    var top = c.querySelector(".card-top");
+    if (top && !c.querySelector(".chip-past")) {
+      var chip = document.createElement("span");
+      chip.className = "chip chip-past";
+      chip.setAttribute("data-i18n", "st_past");
+      chip.textContent = I18N.fr.st_past;
+      top.appendChild(chip);
+    }
+    var cta = c.querySelector(".btn");
+    if (cta && /^https?:/i.test(cta.getAttribute("href") || "")) {
+      cta.setAttribute("data-i18n", "cta_details");
+    }
+    grid.appendChild(c);
+  });
+
+  cards.forEach(function (c) { c._idx = cardIndex(c); });
 
   function translate() {
     var dict = I18N[lang];
@@ -509,6 +724,21 @@ footer a { color: var(--accent); }
       var v = dict[el.getAttribute("data-i18n-ph")];
       if (v) el.setAttribute("placeholder", v);
     });
+    Array.prototype.forEach.call(document.querySelectorAll("[data-i18n-al]"), function (el) {
+      var v = dict[el.getAttribute("data-i18n-al")];
+      if (v) el.setAttribute("aria-label", v);
+    });
+    Array.prototype.forEach.call(document.querySelectorAll(".chip-gen"), function (el) {
+      if (dict.f_general) el.textContent = dict.f_general;
+    });
+    Array.prototype.forEach.call(document.querySelectorAll(".chip-res"), function (el) {
+      if (dict.f_research) el.textContent = dict.f_research;
+    });
+    cards.forEach(function (c) {
+      var cta = c.querySelector(".btn");
+      var h3 = c.querySelector("h3");
+      if (cta && h3) cta.setAttribute("aria-label", cta.textContent.trim() + " : " + h3.textContent.trim());
+    });
     apply();
   }
 
@@ -518,13 +748,21 @@ footer a { color: var(--accent); }
     cards.forEach(function (c) {
       var okTrack = state.track === "all" || c.dataset.track === state.track;
       var okFmt = state.fmt === "all" || c.dataset.fmt === state.fmt;
-      var okQ = !state.q || c.dataset.search.indexOf(state.q) !== -1;
-      var visible = okTrack && okFmt && okQ;
+      var visible = okTrack && okFmt && matchesQuery(c);
       c.classList.toggle("is-hidden", !visible);
       if (visible) shown++;
     });
     countEl.textContent = shown + " " + (shown === 1 ? dict.count_one : dict.count_many);
     emptyEl.hidden = shown !== 0;
+  }
+
+  function syncFilterButtons() {
+    filterBtns.forEach(function (o) {
+      var active = (o.dataset.value === "all")
+        ? (state.track === "all" && state.fmt === "all")
+        : state[o.dataset.key] === o.dataset.value;
+      o.setAttribute("aria-pressed", active ? "true" : "false");
+    });
   }
 
   filterBtns.forEach(function (b) {
@@ -533,39 +771,61 @@ footer a { color: var(--accent); }
       if (val === "all") { state.track = "all"; state.fmt = "all"; }
       else if (state[key] === val) { state[key] = "all"; }
       else { state[key] = val; }
-      filterBtns.forEach(function (o) {
-        var active = (o.dataset.value === "all")
-          ? (state.track === "all" && state.fmt === "all")
-          : state[o.dataset.key] === o.dataset.value;
-        o.setAttribute("aria-pressed", active ? "true" : "false");
-      });
+      syncFilterButtons();
       apply();
     });
   });
 
-  langBtns.forEach(function (b) {
-    b.addEventListener("click", function () {
-      lang = b.dataset.lang;
-      langBtns.forEach(function (o) {
-        o.setAttribute("aria-pressed", o.dataset.lang === lang ? "true" : "false");
-      });
-      translate();
+  if (resetBtn) {
+    resetBtn.addEventListener("click", function () {
+      state.track = "all";
+      state.fmt = "all";
+      state.q = "";
+      search.value = "";
+      syncFilterButtons();
+      apply();
+      search.focus();
     });
-  });
+  }
 
   search.addEventListener("input", function (ev) {
-    state.q = ev.target.value.toLowerCase().trim();
+    state.q = ev.target.value;
     apply();
   });
 
-  var nav = (navigator.language || "fr").slice(0, 2).toLowerCase();
-  if (nav === "nl" || nav === "en") {
-    lang = nav;
+  function setLang(next, persist) {
+    if (LANGS.indexOf(next) === -1) return;
+    lang = next;
     langBtns.forEach(function (o) {
       o.setAttribute("aria-pressed", o.dataset.lang === lang ? "true" : "false");
     });
+    if (persist) {
+      try { localStorage.setItem("belux-cal-lang", lang); } catch (e) {}
+      try {
+        var u = new URL(location.href);
+        u.searchParams.set("lang", lang);
+        history.replaceState(null, "", u.toString());
+      } catch (e) {}
+    }
+    translate();
   }
-  translate();
+
+  langBtns.forEach(function (b) {
+    b.addEventListener("click", function () { setLang(b.dataset.lang, true); });
+  });
+
+  var initial = "fr";
+  var candidates = [];
+  try { candidates.push(new URL(location.href).searchParams.get("lang")); } catch (e) {}
+  try { candidates.push(localStorage.getItem("belux-cal-lang")); } catch (e) {}
+  candidates.push((navigator.language || "fr").slice(0, 2).toLowerCase());
+  candidates.some(function (c) {
+    if (c && LANGS.indexOf(c) !== -1) { initial = c; return true; }
+    return false;
+  });
+
+  setLang(initial, false);
+  syncFilterButtons();
 })();
 </script>
 </body>
