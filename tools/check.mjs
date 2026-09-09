@@ -82,6 +82,20 @@ async function newPage(opts = {}) {
     const over = await page.evaluate(() => document.documentElement.scrollWidth - document.documentElement.clientWidth);
     check(`pas de débordement à ${width}px`, over <= 0, true);
   }
+
+  // 6bis. Aucune image déformée (attributs width/height sans height:auto)
+  await page.setViewportSize({ width: 1440, height: 1000 });
+  const distorted = await page.evaluate(() =>
+    [...document.images]
+      .filter((i) => i.naturalWidth > 0 && i.getBoundingClientRect().height > 0)
+      .map((i) => {
+        const b = i.getBoundingClientRect();
+        return { alt: i.alt, drift: Math.abs((b.width / b.height) / (i.naturalWidth / i.naturalHeight) - 1) };
+      })
+      .filter((x) => x.drift > 0.02)
+      .map((x) => `${x.alt} (${Math.round(x.drift * 100)}%)`));
+  check("aucune image déformée", distorted, []);
+
   await ctx.close();
 }
 
