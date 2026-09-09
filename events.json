@@ -219,7 +219,7 @@
       "datePrecision": "range",
       "registration": "contact",
       "url": "mailto:splace@microsoft.com,joclaes@microsoft.com?subject=MBRC%20Agentic%20AI%20for%20Research",
-      "language": null,
+      "language": { "fr": "Anglais", "nl": "Engels", "en": "English" },
       "verified": "2026-09-09",
       "venue": {
         "fr": "Microsoft Office, Zaventem",
@@ -335,7 +335,7 @@
       "datePrecision": "month",
       "registration": "contact",
       "url": "mailto:splace@microsoft.com,joclaes@microsoft.com?subject=MBRC%20Executive%20Tour%20Cambridge",
-      "language": null,
+      "language": { "fr": "Anglais", "nl": "Engels", "en": "English" },
       "verified": "2026-09-09",
       "venue": {
         "fr": "Cambridge (Royaume-Uni)",
