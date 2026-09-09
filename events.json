@@ -155,7 +155,7 @@
       "datePrecision": "day",
       "registration": "open",
       "url": "https://msit.events.teams.microsoft.com/event/msit.4896abe2-89db-4b3f-93c4-fec61915a84c@72f988bf-86f1-41af-91ab-2d7cd011db47",
-      "language": "en",
+      "language": { "fr": "Français et anglais", "nl": "Frans en Engels", "en": "French and English" },
       "verified": "2026-09-09",
       "venue": {
         "fr": "En ligne (Microsoft Teams Webinar)",

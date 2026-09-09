@@ -105,6 +105,16 @@ function ctaLabel(ev, lang) {
   return L[lang].register;
 }
 
+// `language` accepte trois formes :
+//   null                      -> « À préciser »
+//   "en"                      -> déduit de la page officielle, affiché « (à confirmer) »
+//   { fr, nl, en }            -> confirmé par l'organisateur, affiché tel quel
+function languageLabel(ev, lang) {
+  if (ev.language && typeof ev.language === "object") return ev.language[lang];
+  if (ev.language === "en") return L[lang].english;
+  return L[lang].unknown;
+}
+
 const esc = (s) => String(s == null ? "" : s)
   .replace(/&/g, "&amp;").replace(/</g, "&lt;").replace(/>/g, "&gt;")
   .replace(/"/g, "&quot;").replace(/'/g, "&#x27;");
@@ -130,7 +140,7 @@ function island() {
         venue: ev.venue ? ev.venue[lang] : null,
         audience: ev.audience ? ev.audience[lang] : null,
         benefit: ev.benefit ? ev.benefit[lang] : null,
-        language: ev.language === "en" ? L[lang].english : L[lang].unknown,
+        language: languageLabel(ev, lang),
         theme: data.themes[ev.theme][lang],
         track: ev.track === "Research" ? L[lang].research : L[lang].general,
         format: ev.format === "online" ? L[lang].online : L[lang].onsite,
@@ -158,7 +168,7 @@ function card(ev) {
   if (time) rows.push(`          <div><dt data-i18n="l_when">${fr.when}</dt><dd data-f="time">${esc(time)}</dd></div>`);
   rows.push(`          <div><dt data-i18n="l_where">${fr.where}</dt><dd data-f="venue">${esc(ev.venue.fr)}</dd></div>`);
   rows.push(`          <div><dt data-i18n="l_who">${fr.who}</dt><dd data-f="audience">${esc(ev.audience.fr)}</dd></div>`);
-  rows.push(`          <div><dt data-i18n="l_lang">${fr.lang}</dt><dd data-f="language">${esc(ev.language === "en" ? fr.english : fr.unknown)}</dd></div>`);
+  rows.push(`          <div><dt data-i18n="l_lang">${fr.lang}</dt><dd data-f="language">${esc(languageLabel(ev, "fr"))}</dd></div>`);
 
   const icsBtn = ev.datePrecision === "month" ? "" :
     `\n          <a class="btn btn-ghost btn-sm" href="e/${ev.id}.ics" download data-f="ics">${fr.ics}</a>`;
@@ -248,7 +258,7 @@ function eventPage(ev) {
       date: dateLabel(ev, lang), time: timeLabel(ev, lang),
       venue: ev.venue[lang], audience: ev.audience[lang],
       benefit: ev.benefit ? ev.benefit[lang] : null,
-      language: ev.language === "en" ? L[lang].english : L[lang].unknown,
+      language: languageLabel(ev, lang),
       theme: data.themes[ev.theme][lang],
       format: ev.format === "online" ? L[lang].online : L[lang].onsite,
       cta: ctaLabel(ev, lang), back: L[lang].backToCalendar,
