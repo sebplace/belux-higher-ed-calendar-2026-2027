@@ -1,0 +1,25 @@
+BEGIN:VCALENDAR
+VERSION:2.0
+PRODID:-//Microsoft Belux Higher Education Calendar//FR
+CALSCALE:GREGORIAN
+METHOD:PUBLISH
+BEGIN:VEVENT
+UID:ev-azure-programs@sebplace.github.io
+DTSTAMP:20260909T120000Z
+DTSTART:20260929T090000Z
+DTEND:20260929T090000Z
+SUMMARY:Azure Cloud and AI Platform : Programs\, Benefits and Funding Opt
+ ions
+DESCRIPTION:Les programmes\, offres de financement et accélérateurs Azu
+ re pour les projets cloud et IA de l'enseignement supérieur et de la re
+ cherche\, dont Frontier Accelerate et la Cloud Accelerate Factory.\n\nPu
+ blic : Décideurs IT & Cloud/AI\n\nPlus d'informations : https://msit.ev
+ ents.teams.microsoft.com/event/msit.b9b5d397-1989-48d0-b890-ed7639cc8d81
+ @72f988bf-86f1-41af-91ab-2d7cd011db47\n\nhttps://sebplace.github.io/belu
+ x-higher-ed-calendar-2026-2027/#ev-azure-programs
+LOCATION:En ligne (Microsoft Teams Webinar)
+URL:https://msit.events.teams.microsoft.com/event/msit.b9b5d397-1989-48d0
+ -b890-ed7639cc8d81@72f988bf-86f1-41af-91ab-2d7cd011db47
+STATUS:CONFIRMED
+END:VEVENT
+END:VCALENDAR

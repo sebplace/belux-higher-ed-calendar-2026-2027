@@ -1,0 +1,410 @@
+{
+  "$comment": "Source unique du calendrier. Regenerer index.html et les pages e/ avec: node tools/build.mjs",
+  "site": {
+    "base": "https://sebplace.github.io/belux-higher-ed-calendar-2026-2027/",
+    "updated": "2026-09-09"
+  },
+  "themes": {
+    "copilot": { "fr": "Copilot & M365", "nl": "Copilot & M365", "en": "Copilot & M365" },
+    "ai": { "fr": "IA & agents", "nl": "AI & agents", "en": "AI & agents" },
+    "data": { "fr": "Data & Fabric", "nl": "Data & Fabric", "en": "Data & Fabric" },
+    "cloud": { "fr": "Cloud & modernisation", "nl": "Cloud & modernisering", "en": "Cloud & modernisation" },
+    "engagement": { "fr": "Engagement étudiant", "nl": "Studentenbetrokkenheid", "en": "Student engagement" },
+    "research": { "fr": "Recherche", "nl": "Onderzoek", "en": "Research" }
+  },
+  "events": [
+    {
+      "id": "ev-agentic-governance",
+      "title": "Agentic Governance Workshop",
+      "titleOfficial": "Agentic Governance Workshop",
+      "track": "General",
+      "theme": "ai",
+      "format": "onsite",
+      "start": "2026-09-10",
+      "end": "2026-09-10",
+      "timeStart": "10:00",
+      "timeEnd": "15:00",
+      "datePrecision": "day",
+      "registration": "closed",
+      "url": "https://msevents.microsoft.com/event?id=2107904893",
+      "language": "en",
+      "verified": "2026-09-09",
+      "venue": {
+        "fr": "Microsoft Office, Zaventem",
+        "nl": "Microsoft Office, Zaventem",
+        "en": "Microsoft Office, Zaventem"
+      },
+      "audience": {
+        "fr": "Développeurs, AI engineers, data scientists, architectes de solutions",
+        "nl": "Developers, AI engineers, data scientists, solution architects",
+        "en": "Developers, AI engineers, data scientists, solution architects"
+      },
+      "benefit": {
+        "fr": "Bonnes pratiques de gouvernance de l'IA en entreprise, conception d'agents sécurisés et conformes, et modèles d'architecture pour passer à l'échelle.",
+        "nl": "Best practices voor AI-governance in de onderneming, het bouwen van veilige en compliant agents, en architectuurpatronen om op te schalen.",
+        "en": "Best practices for enterprise AI governance, building secure and compliant agents, and architectural patterns for scaling AI."
+      }
+    },
+    {
+      "id": "ev-copilot-delaware",
+      "title": "M365 Copilot Partner Introduction | Delaware",
+      "titleOfficial": "Higher Education Belgium: M365 Copilot Partner Introduction | Delaware",
+      "track": "General",
+      "theme": "copilot",
+      "format": "online",
+      "start": "2026-09-15",
+      "end": "2026-09-15",
+      "timeStart": "14:00",
+      "timeEnd": "15:00",
+      "datePrecision": "day",
+      "registration": "open",
+      "url": "https://msit.events.teams.microsoft.com/event/msit.a16f7c31-fd0a-41e0-a278-02bd3a878c88@72f988bf-86f1-41af-91ab-2d7cd011db47",
+      "language": "en",
+      "verified": "2026-09-09",
+      "venue": {
+        "fr": "En ligne (Microsoft Teams Webinar)",
+        "nl": "Online (Microsoft Teams Webinar)",
+        "en": "Online (Microsoft Teams Webinar)"
+      },
+      "audience": {
+        "fr": "Enseignement supérieur — IT & décideurs métier",
+        "nl": "Hoger onderwijs — IT- en business-beslissers",
+        "en": "Higher education — IT & business decision-makers"
+      },
+      "benefit": {
+        "fr": "Passer de pilotes IA isolés à une transformation à l'échelle : la vision de Delaware pour l'enseignement supérieur, son approche de l'adoption de Copilot et de la conduite du changement.",
+        "nl": "Van geïsoleerde AI-pilots naar transformatie op schaal: de visie van Delaware op hoger onderwijs, hun aanpak van Copilot-adoptie en verandermanagement.",
+        "en": "Move from isolated AI pilots to transformation at scale: Delaware's vision for higher education, their approach to Copilot adoption and change management."
+      }
+    },
+    {
+      "id": "ev-copilot-appfie",
+      "title": "M365 Copilot Partner Introduction | Appfie",
+      "titleOfficial": "Higher Education Belgium: M365 Copilot Partner Introduction | Appfie",
+      "track": "General",
+      "theme": "copilot",
+      "format": "online",
+      "start": "2026-09-17",
+      "end": "2026-09-17",
+      "timeStart": "14:00",
+      "timeEnd": "15:00",
+      "datePrecision": "day",
+      "registration": "open",
+      "url": "https://msit.events.teams.microsoft.com/event/msit.6fb7b641-4ab7-45ad-8596-26bda0131910@72f988bf-86f1-41af-91ab-2d7cd011db47",
+      "language": "en",
+      "verified": "2026-09-09",
+      "venue": {
+        "fr": "En ligne (Microsoft Teams Webinar)",
+        "nl": "Online (Microsoft Teams Webinar)",
+        "en": "Online (Microsoft Teams Webinar)"
+      },
+      "audience": {
+        "fr": "Enseignement supérieur — IT & décideurs métier",
+        "nl": "Hoger onderwijs — IT- en business-beslissers",
+        "en": "Higher education — IT & business decision-makers"
+      },
+      "benefit": {
+        "fr": "Passer de pilotes IA isolés à une transformation à l'échelle : la vision d'Appfie pour l'enseignement supérieur, son approche de l'adoption de Copilot et de la conduite du changement.",
+        "nl": "Van geïsoleerde AI-pilots naar transformatie op schaal: de visie van Appfie op hoger onderwijs, hun aanpak van Copilot-adoptie en verandermanagement.",
+        "en": "Move from isolated AI pilots to transformation at scale: Appfie's vision for higher education, their approach to Copilot adoption and change management."
+      }
+    },
+    {
+      "id": "ev-copilot-cronos",
+      "title": "M365 Copilot Partner Introduction | Cronos Group",
+      "titleOfficial": "Higher Education Belgium: M365 Copilot Partner Introduction | Cronos Group",
+      "track": "General",
+      "theme": "copilot",
+      "format": "online",
+      "start": "2026-09-22",
+      "end": "2026-09-22",
+      "timeStart": "14:00",
+      "timeEnd": "15:00",
+      "datePrecision": "day",
+      "registration": "open",
+      "url": "https://msit.events.teams.microsoft.com/event/msit.fc3fac9a-286a-4994-bc32-f320cbb59ba6@72f988bf-86f1-41af-91ab-2d7cd011db47",
+      "language": "en",
+      "verified": "2026-09-09",
+      "venue": {
+        "fr": "En ligne (Microsoft Teams Webinar)",
+        "nl": "Online (Microsoft Teams Webinar)",
+        "en": "Online (Microsoft Teams Webinar)"
+      },
+      "audience": {
+        "fr": "Enseignement supérieur — IT & décideurs métier",
+        "nl": "Hoger onderwijs — IT- en business-beslissers",
+        "en": "Higher education — IT & business decision-makers"
+      },
+      "benefit": {
+        "fr": "Passer de pilotes IA isolés à une transformation à l'échelle : la vision du Cronos Group pour l'enseignement supérieur, son approche de l'adoption de Copilot et de la conduite du changement.",
+        "nl": "Van geïsoleerde AI-pilots naar transformatie op schaal: de visie van de Cronos Group op hoger onderwijs, hun aanpak van Copilot-adoptie en verandermanagement.",
+        "en": "Move from isolated AI pilots to transformation at scale: the Cronos Group's vision for higher education, their approach to Copilot adoption and change management."
+      }
+    },
+    {
+      "id": "ev-copilot-keyes",
+      "title": "M365 Copilot Partner Introduction | Keyes",
+      "titleOfficial": "Higher Education Belgium: M365 Copilot Partner Introduction | Keyes",
+      "track": "General",
+      "theme": "copilot",
+      "format": "online",
+      "start": "2026-09-23",
+      "end": "2026-09-23",
+      "timeStart": "15:00",
+      "timeEnd": "16:00",
+      "datePrecision": "day",
+      "registration": "open",
+      "url": "https://msit.events.teams.microsoft.com/event/msit.4896abe2-89db-4b3f-93c4-fec61915a84c@72f988bf-86f1-41af-91ab-2d7cd011db47",
+      "language": "en",
+      "verified": "2026-09-09",
+      "venue": {
+        "fr": "En ligne (Microsoft Teams Webinar)",
+        "nl": "Online (Microsoft Teams Webinar)",
+        "en": "Online (Microsoft Teams Webinar)"
+      },
+      "audience": {
+        "fr": "Enseignement supérieur — IT & décideurs métier",
+        "nl": "Hoger onderwijs — IT- en business-beslissers",
+        "en": "Higher education — IT & business decision-makers"
+      },
+      "benefit": {
+        "fr": "Passer de pilotes IA isolés à une transformation à l'échelle : la vision de Keyes pour l'enseignement supérieur, son approche de l'adoption de Copilot et de la conduite du changement.",
+        "nl": "Van geïsoleerde AI-pilots naar transformatie op schaal: de visie van Keyes op hoger onderwijs, hun aanpak van Copilot-adoptie en verandermanagement.",
+        "en": "Move from isolated AI pilots to transformation at scale: Keyes' vision for higher education, their approach to Copilot adoption and change management."
+      }
+    },
+    {
+      "id": "ev-copilot-academic-software",
+      "title": "M365 Copilot Partner Introduction | Academic Software",
+      "titleOfficial": "Higher Education Belgium: M365 Copilot Partner Introduction | Academic Software",
+      "track": "General",
+      "theme": "copilot",
+      "format": "online",
+      "start": "2026-09-24",
+      "end": "2026-09-24",
+      "timeStart": "14:00",
+      "timeEnd": "15:00",
+      "datePrecision": "day",
+      "registration": "open",
+      "url": "https://msit.events.teams.microsoft.com/event/msit.b7cc2218-c3cd-4f69-98da-6730e1bfdfea@72f988bf-86f1-41af-91ab-2d7cd011db47",
+      "language": "en",
+      "verified": "2026-09-09",
+      "venue": {
+        "fr": "En ligne (Microsoft Teams Webinar)",
+        "nl": "Online (Microsoft Teams Webinar)",
+        "en": "Online (Microsoft Teams Webinar)"
+      },
+      "audience": {
+        "fr": "Enseignement supérieur — IT & décideurs métier",
+        "nl": "Hoger onderwijs — IT- en business-beslissers",
+        "en": "Higher education — IT & business decision-makers"
+      },
+      "benefit": {
+        "fr": "Passer de pilotes IA isolés à une transformation à l'échelle : la vision d'Academic Software pour l'enseignement supérieur, son approche de l'adoption de Copilot et de la conduite du changement.",
+        "nl": "Van geïsoleerde AI-pilots naar transformatie op schaal: de visie van Academic Software op hoger onderwijs, hun aanpak van Copilot-adoptie en verandermanagement.",
+        "en": "Move from isolated AI pilots to transformation at scale: Academic Software's vision for higher education, their approach to Copilot adoption and change management."
+      }
+    },
+    {
+      "id": "ev-mbrc-agentic-ai",
+      "title": "MBRC event: Agentic AI for Research (selection-based)",
+      "titleOfficial": "MBRC event: Agentic AI for Research (selection-based)",
+      "track": "Research",
+      "theme": "research",
+      "format": "onsite",
+      "start": "2026-09-29",
+      "end": "2026-09-30",
+      "timeStart": null,
+      "timeEnd": null,
+      "datePrecision": "range",
+      "registration": "contact",
+      "url": "mailto:splace@microsoft.com,joclaes@microsoft.com?subject=MBRC%20Agentic%20AI%20for%20Research",
+      "language": null,
+      "verified": "2026-09-09",
+      "venue": {
+        "fr": "Microsoft Office, Zaventem",
+        "nl": "Microsoft Office, Zaventem",
+        "en": "Microsoft Office, Zaventem"
+      },
+      "audience": { "fr": "Recherche, RSE", "nl": "Onderzoek, RSE", "en": "Research, RSE" },
+      "benefit": null
+    },
+    {
+      "id": "ev-azure-programs",
+      "title": "Azure Cloud and AI Platform: Programs, Benefits and Funding Options",
+      "titleOfficial": "Azure Cloud and AI Platform : Programs, Benefits and Funding Options",
+      "track": "General",
+      "theme": "cloud",
+      "format": "online",
+      "start": "2026-09-29",
+      "end": "2026-09-29",
+      "timeStart": "11:00",
+      "timeEnd": null,
+      "datePrecision": "day",
+      "registration": "open",
+      "url": "https://msit.events.teams.microsoft.com/event/msit.b9b5d397-1989-48d0-b890-ed7639cc8d81@72f988bf-86f1-41af-91ab-2d7cd011db47",
+      "language": "en",
+      "verified": "2026-09-09",
+      "venue": {
+        "fr": "En ligne (Microsoft Teams Webinar)",
+        "nl": "Online (Microsoft Teams Webinar)",
+        "en": "Online (Microsoft Teams Webinar)"
+      },
+      "audience": {
+        "fr": "Décideurs IT & Cloud/AI",
+        "nl": "IT- en Cloud/AI-beslissers",
+        "en": "IT & Cloud/AI decision-makers"
+      },
+      "benefit": {
+        "fr": "Les programmes, offres de financement et accélérateurs Azure pour les projets cloud et IA de l'enseignement supérieur et de la recherche, dont Frontier Accelerate et la Cloud Accelerate Factory.",
+        "nl": "De Azure-programma's, financieringsaanbiedingen en accelerators voor cloud- en AI-projecten in hoger onderwijs en onderzoek, waaronder Frontier Accelerate en de Cloud Accelerate Factory.",
+        "en": "Azure programs, funding offers and accelerators for higher education and research cloud and AI projects, including Frontier Accelerate and the Cloud Accelerate Factory."
+      }
+    },
+    {
+      "id": "ev-fabric-roadshow",
+      "title": "Microsoft Fabric Roadshow Brussels",
+      "titleOfficial": "Microsoft Fabric Roadshow Brussels",
+      "track": "General",
+      "theme": "data",
+      "format": "onsite",
+      "start": "2026-10-08",
+      "end": "2026-10-08",
+      "timeStart": "09:00",
+      "timeEnd": "18:00",
+      "datePrecision": "day",
+      "registration": "open",
+      "url": "https://msevents.microsoft.com/event?id=58643712",
+      "language": "en",
+      "verified": "2026-09-09",
+      "venue": {
+        "fr": "Microsoft Office, Zaventem",
+        "nl": "Microsoft Office, Zaventem",
+        "en": "Microsoft Office, Zaventem"
+      },
+      "audience": {
+        "fr": "CxO, CDO, responsables data & analytics, data engineers",
+        "nl": "CxO's, CDO's, data- & analyticsverantwoordelijken, data engineers",
+        "en": "CxOs, CDOs, data & analytics leads, data engineers"
+      },
+      "benefit": {
+        "fr": "Découvrir Microsoft Fabric et la Real-Time Intelligence avec les experts et MVP locaux, en deux parcours parallèles : métier et technique.",
+        "nl": "Microsoft Fabric en Real-Time Intelligence ontdekken met lokale experts en MVP's, in twee parallelle tracks: business en technisch.",
+        "en": "Discover Microsoft Fabric and Real-Time Intelligence with local experts and MVPs, across two parallel tracks: business and technical."
+      }
+    },
+    {
+      "id": "ev-azure-modernization-hack",
+      "title": "Microsoft Azure Modernization Hack",
+      "titleOfficial": "Microsoft Azure Modernization Hack",
+      "track": "General",
+      "theme": "cloud",
+      "format": "onsite",
+      "start": "2026-10-13",
+      "end": "2026-10-13",
+      "timeStart": "09:00",
+      "timeEnd": "16:00",
+      "datePrecision": "day",
+      "registration": "open",
+      "url": "https://msevents.microsoft.com/event?id=2336117916",
+      "language": "en",
+      "verified": "2026-09-09",
+      "venue": { "fr": "Bruxelles", "nl": "Brussel", "en": "Brussels" },
+      "audience": {
+        "fr": "Experts & administrateurs IT, décideurs IT — niveau L200-L300",
+        "nl": "IT-experts en -beheerders, IT-beslissers — niveau L200-L300",
+        "en": "IT experts and administrators, IT decision-makers — level L200-L300"
+      },
+      "benefit": {
+        "fr": "Atelier pratique de modernisation d'applications .NET et Java avec GitHub Copilot, et migration de bases SQL Server vers Azure. Ordinateur portable requis, abonnement Azure fourni.",
+        "nl": "Praktische hack rond het moderniseren van .NET- en Java-applicaties met GitHub Copilot, en migratie van SQL Server-databases naar Azure. Eigen laptop vereist, Azure-omgeving voorzien.",
+        "en": "Hands-on hack modernising .NET and Java applications with GitHub Copilot, plus SQL Server database migration to Azure. Bring your laptop, Azure environment provided."
+      }
+    },
+    {
+      "id": "ev-mbrc-cambridge",
+      "title": "MBRC event: Executive Tour to Microsoft Research Cambridge",
+      "titleOfficial": "MBRC event: Executive Tour to Microsoft Research Cambridge",
+      "track": "Research",
+      "theme": "research",
+      "format": "onsite",
+      "start": "2026-11-01",
+      "end": "2026-11-30",
+      "timeStart": null,
+      "timeEnd": null,
+      "datePrecision": "month",
+      "registration": "contact",
+      "url": "mailto:splace@microsoft.com,joclaes@microsoft.com?subject=MBRC%20Executive%20Tour%20Cambridge",
+      "language": null,
+      "verified": "2026-09-09",
+      "venue": {
+        "fr": "Cambridge (Royaume-Uni)",
+        "nl": "Cambridge (VK)",
+        "en": "Cambridge (UK)"
+      },
+      "audience": {
+        "fr": "Dirigeants de la recherche",
+        "nl": "Onderzoeksdirectie",
+        "en": "Research executives"
+      },
+      "benefit": null
+    },
+    {
+      "id": "ev-ignite",
+      "title": "Microsoft Ignite: Tech Conference",
+      "titleOfficial": "Microsoft Ignite",
+      "track": "General",
+      "theme": "ai",
+      "format": "online",
+      "start": "2026-11-17",
+      "end": "2026-11-20",
+      "timeStart": null,
+      "timeEnd": null,
+      "datePrecision": "range",
+      "registration": "open",
+      "url": "https://ignite.microsoft.com/en-US/home",
+      "language": "en",
+      "verified": "2026-09-09",
+      "venue": {
+        "fr": "San Francisco (Moscone Center) + en ligne",
+        "nl": "San Francisco (Moscone Center) + online",
+        "en": "San Francisco (Moscone Center) + online"
+      },
+      "audience": {
+        "fr": "Tech-first / IT Pro, développeurs, décideurs",
+        "nl": "Tech-first / IT Pro, developers, beslissers",
+        "en": "Tech-first / IT Pro, developers, decision-makers"
+      },
+      "benefit": {
+        "fr": "La feuille de route IA et cloud de Microsoft en avant-première, avec ateliers, certifications et rencontres avec les experts produit.",
+        "nl": "De AI- en cloudroadmap van Microsoft als eerste ontdekken, met labs, certificeringen en ontmoetingen met productexperts.",
+        "en": "See Microsoft's AI and cloud roadmap first, with labs, certifications and access to product experts."
+      }
+    },
+    {
+      "id": "ev-dynamics-student-engagement",
+      "title": "Transforming Student Engagement with Dynamics 365 CRM, Contact Center & AI",
+      "titleOfficial": "Transforming Student Engagement with Dynamics 365 CRM, Contact Center & AI",
+      "track": "General",
+      "theme": "engagement",
+      "format": "onsite",
+      "start": "2026-12-02",
+      "end": "2026-12-02",
+      "timeStart": "09:00",
+      "timeEnd": "12:00",
+      "datePrecision": "day",
+      "provisional": true,
+      "registration": "contact",
+      "url": "mailto:splace@microsoft.com,joclaes@microsoft.com?subject=Transforming%20Student%20Engagement%20with%20Dynamics%20365",
+      "language": null,
+      "verified": "2026-09-09",
+      "venue": { "fr": "À confirmer", "nl": "Te bevestigen", "en": "To be confirmed" },
+      "audience": {
+        "fr": "Décideurs IT & métier de l'enseignement supérieur",
+        "nl": "IT- en business-beslissers hoger onderwijs",
+        "en": "Higher education IT & business decision-makers"
+      },
+      "benefit": null
+    }
+  ]
+}

@@ -1,0 +1,17 @@
+BEGIN:VCALENDAR
+VERSION:2.0
+PRODID:-//Microsoft Belux Higher Education Calendar//FR
+CALSCALE:GREGORIAN
+METHOD:PUBLISH
+BEGIN:VEVENT
+UID:ev-mbrc-agentic-ai@sebplace.github.io
+DTSTAMP:20260909T120000Z
+DTSTART;VALUE=DATE:20260929
+DTEND;VALUE=DATE:20261001
+SUMMARY:MBRC event: Agentic AI for Research (selection-based)
+DESCRIPTION:Public : Recherche\, RSE\n\nhttps://sebplace.github.io/belux-
+ higher-ed-calendar-2026-2027/#ev-mbrc-agentic-ai
+LOCATION:Microsoft Office\, Zaventem
+STATUS:CONFIRMED
+END:VEVENT
+END:VCALENDAR

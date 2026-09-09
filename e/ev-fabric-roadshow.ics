@@ -1,0 +1,22 @@
+BEGIN:VCALENDAR
+VERSION:2.0
+PRODID:-//Microsoft Belux Higher Education Calendar//FR
+CALSCALE:GREGORIAN
+METHOD:PUBLISH
+BEGIN:VEVENT
+UID:ev-fabric-roadshow@sebplace.github.io
+DTSTAMP:20260909T120000Z
+DTSTART:20261008T070000Z
+DTEND:20261008T160000Z
+SUMMARY:Microsoft Fabric Roadshow Brussels
+DESCRIPTION:Découvrir Microsoft Fabric et la Real-Time Intelligence avec
+  les experts et MVP locaux\, en deux parcours parallèles : métier et t
+ echnique.\n\nPublic : CxO\, CDO\, responsables data & analytics\, data e
+ ngineers\n\nPlus d'informations : https://msevents.microsoft.com/event?i
+ d=58643712\n\nhttps://sebplace.github.io/belux-higher-ed-calendar-2026-2
+ 027/#ev-fabric-roadshow
+LOCATION:Microsoft Office\, Zaventem
+URL:https://msevents.microsoft.com/event?id=58643712
+STATUS:CONFIRMED
+END:VEVENT
+END:VCALENDAR

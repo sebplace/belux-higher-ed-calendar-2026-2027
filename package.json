@@ -1,0 +1,15 @@
+{
+  "name": "belux-higher-ed-calendar",
+  "version": "2.0.0",
+  "private": true,
+  "type": "module",
+  "description": "Calendrier public des événements Microsoft et partenaires pour l'enseignement supérieur en Belgique et au Luxembourg.",
+  "scripts": {
+    "build": "node tools/build.mjs",
+    "check": "node tools/check.mjs"
+  },
+  "devDependencies": {
+    "playwright-core": "^1.55.0"
+  }
+}
+

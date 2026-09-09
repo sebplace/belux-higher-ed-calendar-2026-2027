@@ -1,0 +1,22 @@
+BEGIN:VCALENDAR
+VERSION:2.0
+PRODID:-//Microsoft Belux Higher Education Calendar//FR
+CALSCALE:GREGORIAN
+METHOD:PUBLISH
+BEGIN:VEVENT
+UID:ev-agentic-governance@sebplace.github.io
+DTSTAMP:20260909T120000Z
+DTSTART:20260910T080000Z
+DTEND:20260910T130000Z
+SUMMARY:Agentic Governance Workshop
+DESCRIPTION:Bonnes pratiques de gouvernance de l'IA en entreprise\, conce
+ ption d'agents sécurisés et conformes\, et modèles d'architecture pou
+ r passer à l'échelle.\n\nPublic : Développeurs\, AI engineers\, data 
+ scientists\, architectes de solutions\n\nPlus d'informations : https://m
+ sevents.microsoft.com/event?id=2107904893\n\nhttps://sebplace.github.io/
+ belux-higher-ed-calendar-2026-2027/#ev-agentic-governance
+LOCATION:Microsoft Office\, Zaventem
+URL:https://msevents.microsoft.com/event?id=2107904893
+STATUS:CONFIRMED
+END:VEVENT
+END:VCALENDAR

@@ -1,0 +1,26 @@
+BEGIN:VCALENDAR
+VERSION:2.0
+PRODID:-//Microsoft Belux Higher Education Calendar//FR
+CALSCALE:GREGORIAN
+METHOD:PUBLISH
+BEGIN:VEVENT
+UID:ev-copilot-academic-software@sebplace.github.io
+DTSTAMP:20260909T120000Z
+DTSTART:20260924T120000Z
+DTEND:20260924T130000Z
+SUMMARY:Higher Education Belgium: M365 Copilot Partner Introduction | Aca
+ demic Software
+DESCRIPTION:Passer de pilotes IA isolés à une transformation à l'éche
+ lle : la vision d'Academic Software pour l'enseignement supérieur\, son
+  approche de l'adoption de Copilot et de la conduite du changement.\n\nP
+ ublic : Enseignement supérieur — IT & décideurs métier\n\nPlus d'in
+ formations : https://msit.events.teams.microsoft.com/event/msit.b7cc2218
+ -c3cd-4f69-98da-6730e1bfdfea@72f988bf-86f1-41af-91ab-2d7cd011db47\n\nhtt
+ ps://sebplace.github.io/belux-higher-ed-calendar-2026-2027/#ev-copilot-a
+ cademic-software
+LOCATION:En ligne (Microsoft Teams Webinar)
+URL:https://msit.events.teams.microsoft.com/event/msit.b7cc2218-c3cd-4f69
+ -98da-6730e1bfdfea@72f988bf-86f1-41af-91ab-2d7cd011db47
+STATUS:CONFIRMED
+END:VEVENT
+END:VCALENDAR

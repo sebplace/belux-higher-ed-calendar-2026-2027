@@ -1,0 +1,3 @@
+User-agent: *
+Allow: /
+Sitemap: https://sebplace.github.io/belux-higher-ed-calendar-2026-2027/sitemap.xml

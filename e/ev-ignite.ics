@@ -1,0 +1,21 @@
+BEGIN:VCALENDAR
+VERSION:2.0
+PRODID:-//Microsoft Belux Higher Education Calendar//FR
+CALSCALE:GREGORIAN
+METHOD:PUBLISH
+BEGIN:VEVENT
+UID:ev-ignite@sebplace.github.io
+DTSTAMP:20260909T120000Z
+DTSTART;VALUE=DATE:20261117
+DTEND;VALUE=DATE:20261121
+SUMMARY:Microsoft Ignite
+DESCRIPTION:La feuille de route IA et cloud de Microsoft en avant-premiè
+ re\, avec ateliers\, certifications et rencontres avec les experts produ
+ it.\n\nPublic : Tech-first / IT Pro\, développeurs\, décideurs\n\nPlus
+  d'informations : https://ignite.microsoft.com/en-US/home\n\nhttps://seb
+ place.github.io/belux-higher-ed-calendar-2026-2027/#ev-ignite
+LOCATION:San Francisco (Moscone Center) + en ligne
+URL:https://ignite.microsoft.com/en-US/home
+STATUS:CONFIRMED
+END:VEVENT
+END:VCALENDAR

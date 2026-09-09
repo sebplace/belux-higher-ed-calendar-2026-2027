@@ -1,0 +1,19 @@
+BEGIN:VCALENDAR
+VERSION:2.0
+PRODID:-//Microsoft Belux Higher Education Calendar//FR
+CALSCALE:GREGORIAN
+METHOD:PUBLISH
+BEGIN:VEVENT
+UID:ev-dynamics-student-engagement@sebplace.github.io
+DTSTAMP:20260909T120000Z
+DTSTART:20261202T080000Z
+DTEND:20261202T110000Z
+SUMMARY:[à confirmer] Transforming Student Engagement with Dynamics 365 
+ CRM\, Contact Center & AI
+DESCRIPTION:Public : Décideurs IT & métier de l'enseignement supérieur
+ \n\nhttps://sebplace.github.io/belux-higher-ed-calendar-2026-2027/#ev-dy
+ namics-student-engagement
+LOCATION:À confirmer
+STATUS:TENTATIVE
+END:VEVENT
+END:VCALENDAR

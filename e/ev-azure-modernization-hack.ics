@@ -1,0 +1,23 @@
+BEGIN:VCALENDAR
+VERSION:2.0
+PRODID:-//Microsoft Belux Higher Education Calendar//FR
+CALSCALE:GREGORIAN
+METHOD:PUBLISH
+BEGIN:VEVENT
+UID:ev-azure-modernization-hack@sebplace.github.io
+DTSTAMP:20260909T120000Z
+DTSTART:20261013T070000Z
+DTEND:20261013T140000Z
+SUMMARY:Microsoft Azure Modernization Hack
+DESCRIPTION:Atelier pratique de modernisation d'applications .NET et Java
+  avec GitHub Copilot\, et migration de bases SQL Server vers Azure. Ordi
+ nateur portable requis\, abonnement Azure fourni.\n\nPublic : Experts & 
+ administrateurs IT\, décideurs IT — niveau L200-L300\n\nPlus d'inform
+ ations : https://msevents.microsoft.com/event?id=2336117916\n\nhttps://s
+ ebplace.github.io/belux-higher-ed-calendar-2026-2027/#ev-azure-moderniza
+ tion-hack
+LOCATION:Bruxelles
+URL:https://msevents.microsoft.com/event?id=2336117916
+STATUS:CONFIRMED
+END:VEVENT
+END:VCALENDAR
