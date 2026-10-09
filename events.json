@@ -559,6 +559,114 @@
         "nl": "Een ochtend over studentrelaties in het AI-tijdperk: CRM-strategie met Dynamics 365, omnichannel studentendiensten met Customer Service en Contact Center, AI-agents en Copilot in de werking, gevolgd door een rondetafel voor directieleden.",
         "en": "A morning on student engagement in the AI era: CRM strategy with Dynamics 365, omnichannel student services with Customer Service and Contact Center, AI agents and Copilot across operations, followed by an executive roundtable."
       }
+    },
+    {
+      "id": "ev-github-ubb-budgets",
+      "title": "Understanding Budgets for UBB: Master GitHub Usage-Based Billing",
+      "titleOfficial": "Understanding Budgets for UBB: Master GitHub Usage-Based Billing",
+      "theme": "cloud",
+      "track": "General",
+      "format": "online",
+      "timeStart": null,
+      "timeEnd": null,
+      "datePrecision": "day",
+      "language": {
+        "fr": "Anglais",
+        "nl": "Engels",
+        "en": "English"
+      },
+      "verified": "2026-10-09",
+      "venue": {
+        "fr": "En ligne (webinaire Xebia)",
+        "nl": "Online (Xebia-webinar)",
+        "en": "Online (Xebia webinar)"
+      },
+      "start": "2026-10-13",
+      "end": "2026-10-13",
+      "registration": "open",
+      "url": "https://events.xebia.com/master-github-usage-based-billing-oct-13",
+      "audience": {
+        "fr": "Responsables IT, plateformes développeur, architectes et FinOps",
+        "nl": "IT-verantwoordelijken, developer-platformteams, architecten en FinOps",
+        "en": "IT leads, developer-platform teams, architects and FinOps"
+      },
+      "benefit": {
+        "fr": "Comprendre et maîtriser la facturation GitHub à l'usage (budgets, consommation d'IA), avec notre partenaire Xebia.",
+        "nl": "De GitHub-facturering op basis van verbruik (budgetten, AI-verbruik) begrijpen en beheersen, met onze partner Xebia.",
+        "en": "Understand and manage GitHub usage-based billing (budgets, AI consumption), delivered with our partner Xebia."
+      }
+    },
+    {
+      "id": "ev-token-economics",
+      "title": "Improving Outcomes While Managing Token Spend",
+      "titleOfficial": "Improving Outcomes While Managing Token Spend (Token Economics)",
+      "theme": "ai",
+      "track": "General",
+      "format": "online",
+      "timeStart": null,
+      "timeEnd": null,
+      "datePrecision": "day",
+      "language": {
+        "fr": "Anglais",
+        "nl": "Engels",
+        "en": "English"
+      },
+      "verified": "2026-10-09",
+      "venue": {
+        "fr": "En ligne (Microsoft Teams Webinar)",
+        "nl": "Online (Microsoft Teams Webinar)",
+        "en": "Online (Microsoft Teams Webinar)"
+      },
+      "start": "2026-10-14",
+      "end": "2026-10-14",
+      "registration": "open",
+      "url": "https://events.teams.microsoft.com/event/474970f0-e74e-4c86-b8f1-7564a629b055@9ca75128-a244-4596-877b-f24828e476e2",
+      "audience": {
+        "fr": "Direction IT, architectes, FinOps et équipes utilisant GitHub Copilot ou des services d'IA à l'usage",
+        "nl": "IT-leiding, architecten, FinOps en teams die GitHub Copilot of AI-diensten op basis van verbruik gebruiken",
+        "en": "IT leadership, architects, FinOps and teams adopting GitHub Copilot or usage-based AI services"
+      },
+      "benefit": {
+        "fr": "Piloter les dépenses en tokens d'IA (budgets, résultats) sans freiner l'adoption.",
+        "nl": "De uitgaven aan AI-tokens (budgetten, resultaten) sturen zonder de adoptie te remmen.",
+        "en": "Manage AI token spend (budgets, outcomes) without slowing adoption."
+      }
+    },
+    {
+      "id": "ev-digital-sovereignty",
+      "title": "Microsoft Digital Sovereignty Options",
+      "titleOfficial": "Microsoft Digital Sovereignty Options, Customer Virtual Webinar",
+      "theme": "cloud",
+      "track": "General",
+      "format": "online",
+      "timeStart": "10:00",
+      "timeEnd": "11:00",
+      "datePrecision": "day",
+      "language": {
+        "fr": "Anglais",
+        "nl": "Engels",
+        "en": "English"
+      },
+      "verified": "2026-10-09",
+      "venue": {
+        "fr": "En ligne (Microsoft Teams)",
+        "nl": "Online (Microsoft Teams)",
+        "en": "Online (Microsoft Teams)"
+      },
+      "start": "2026-11-03",
+      "end": "2026-11-03",
+      "registration": "contact",
+      "url": "mailto:splace@microsoft.com,joclaes@microsoft.com?subject=Microsoft%20Digital%20Sovereignty%20Options%20-%203%20novembre%202026",
+      "audience": {
+        "fr": "Direction IT, juridique/DPO et responsables cloud",
+        "nl": "IT-leiding, juridisch/DPO en cloudverantwoordelijken",
+        "en": "IT leadership, legal/DPO and cloud leads"
+      },
+      "benefit": {
+        "fr": "Découvrir les options de souveraineté numérique proposées par Microsoft aux clients européens.",
+        "nl": "De opties voor digitale soevereiniteit ontdekken die Microsoft aan Europese klanten biedt.",
+        "en": "Discover the digital sovereignty options Microsoft offers European customers."
+      }
     }
   ]
 }

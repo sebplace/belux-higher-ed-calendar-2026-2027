@@ -1,0 +1,19 @@
+BEGIN:VCALENDAR
+VERSION:2.0
+PRODID:-//Microsoft Belux Higher Education Calendar//FR
+CALSCALE:GREGORIAN
+METHOD:PUBLISH
+BEGIN:VEVENT
+UID:ev-digital-sovereignty@sebplace.github.io
+DTSTAMP:20260909T120000Z
+DTSTART:20261103T090000Z
+DTEND:20261103T100000Z
+SUMMARY:Microsoft Digital Sovereignty Options\, Customer Virtual Webinar
+DESCRIPTION:Découvrir les options de souveraineté numérique proposées
+  par Microsoft aux clients européens.\n\nPublic : Direction IT\, juridi
+ que/DPO et responsables cloud\n\nhttps://sebplace.github.io/belux-higher
+ -ed-calendar-2026-2027/#ev-digital-sovereignty
+LOCATION:En ligne (Microsoft Teams)
+STATUS:CONFIRMED
+END:VEVENT
+END:VCALENDAR

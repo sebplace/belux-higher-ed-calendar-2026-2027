@@ -1,0 +1,22 @@
+BEGIN:VCALENDAR
+VERSION:2.0
+PRODID:-//Microsoft Belux Higher Education Calendar//FR
+CALSCALE:GREGORIAN
+METHOD:PUBLISH
+BEGIN:VEVENT
+UID:ev-github-ubb-budgets@sebplace.github.io
+DTSTAMP:20260909T120000Z
+DTSTART;VALUE=DATE:20261013
+DTEND;VALUE=DATE:20261014
+SUMMARY:Understanding Budgets for UBB: Master GitHub Usage-Based Billing
+DESCRIPTION:Comprendre et maîtriser la facturation GitHub à l'usage (bu
+ dgets\, consommation d'IA)\, avec notre partenaire Xebia.\n\nPublic : Re
+ sponsables IT\, plateformes développeur\, architectes et FinOps\n\nPlus
+  d'informations : https://events.xebia.com/master-github-usage-based-bil
+ ling-oct-13\n\nhttps://sebplace.github.io/belux-higher-ed-calendar-2026-
+ 2027/#ev-github-ubb-budgets
+LOCATION:En ligne (webinaire Xebia)
+URL:https://events.xebia.com/master-github-usage-based-billing-oct-13
+STATUS:CONFIRMED
+END:VEVENT
+END:VCALENDAR

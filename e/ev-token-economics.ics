@@ -1,0 +1,24 @@
+BEGIN:VCALENDAR
+VERSION:2.0
+PRODID:-//Microsoft Belux Higher Education Calendar//FR
+CALSCALE:GREGORIAN
+METHOD:PUBLISH
+BEGIN:VEVENT
+UID:ev-token-economics@sebplace.github.io
+DTSTAMP:20260909T120000Z
+DTSTART;VALUE=DATE:20261014
+DTEND;VALUE=DATE:20261015
+SUMMARY:Improving Outcomes While Managing Token Spend (Token Economics)
+DESCRIPTION:Piloter les dépenses en tokens d'IA (budgets\, résultats) s
+ ans freiner l'adoption.\n\nPublic : Direction IT\, architectes\, FinOps 
+ et équipes utilisant GitHub Copilot ou des services d'IA à l'usage\n\n
+ Plus d'informations : https://events.teams.microsoft.com/event/474970f0-
+ e74e-4c86-b8f1-7564a629b055@9ca75128-a244-4596-877b-f24828e476e2\n\nhttp
+ s://sebplace.github.io/belux-higher-ed-calendar-2026-2027/#ev-token-econ
+ omics
+LOCATION:En ligne (Microsoft Teams Webinar)
+URL:https://events.teams.microsoft.com/event/474970f0-e74e-4c86-b8f1-7564
+ a629b055@9ca75128-a244-4596-877b-f24828e476e2
+STATUS:CONFIRMED
+END:VEVENT
+END:VCALENDAR
