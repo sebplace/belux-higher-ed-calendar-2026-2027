@@ -61,7 +61,7 @@ async function newPage(opts = {}) {
 
   // 4. Filtres
   await page.selectOption("#f-theme", "copilot");
-  check("filtre thème Copilot", await page.locator("#grid .card:not(.is-hidden)").count(),
+  check("filtre thème Copilot (grille + archive)", await page.locator(".card:not(.is-hidden)").count(),
     data.events.filter((e) => e.theme === "copilot").length);
   await page.locator("#reset").click();
 
@@ -113,12 +113,28 @@ async function newPage(opts = {}) {
   const { ctx, page } = await newPage();
   await page.clock.install({ time: new Date("2027-01-15T09:00:00") });
   await page.goto(INDEX, { waitUntil: "load" });
-  check("tous les événements sont archivés en 2027", await page.locator("#archive-grid .card").count(), data.events.length);
-  check("grille principale vide", await page.locator("#grid .card").count(), 0);
+  const ongoingCount = data.events.filter((e) => e.ongoing).length;
+  check("tous les événements datés sont archivés en 2027", await page.locator("#archive-grid .card").count(), data.events.length - ongoingCount);
+  check("une série récurrente n'est jamais archivée", await page.locator("#grid .card[data-ongoing='true']").count(), ongoingCount);
+  check("grille principale = séries seulement", await page.locator("#grid .card").count(), ongoingCount);
   await ctx.close();
 }
 
-// 9. Pages et fichiers par événement
+// 9. Série récurrente : ni .ics inventé, ni date de fin fabriquée, ni « prochain événement »
+{
+  const { ctx, page } = await newPage();
+  await page.goto(INDEX, { waitUntil: "load" });
+  const series = data.events.filter((e) => e.ongoing);
+  for (const ev of series) {
+    check(`série ${ev.id} : pas de bouton agenda`, await page.locator(`#${ev.id} a[download]`).count(), 0);
+    check(`série ${ev.id} : texte de date propre`, await page.locator(`#${ev.id} [data-f="date"]`).textContent(), ev.dateText.fr);
+  }
+  const next = await page.locator("#next-link").textContent();
+  check("le prochain événement n'est jamais une série", series.some((e) => e.title === next), false);
+  await ctx.close();
+}
+
+// 10. Pages et fichiers par événement
 {
   const { ctx, page } = await newPage();
   for (const ev of data.events) {
@@ -132,7 +148,7 @@ async function newPage(opts = {}) {
   await ctx.close();
 }
 
-// 10. Aucune erreur JavaScript
+// 11. Aucune erreur JavaScript
 check("aucune erreur console/page", errors, []);
 
 await browser.close();

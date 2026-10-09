@@ -74,6 +74,7 @@ function tzLabel(dateStr) {
 }
 
 function dateLabel(ev, lang) {
+  if (ev.dateText) return ev.dateText[lang];
   const [sy, sm, sd] = ev.start.split("-").map(Number);
   const [, em, ed] = ev.end.split("-").map(Number);
   const months = MONTHS[lang];
@@ -91,6 +92,7 @@ function dateLabel(ev, lang) {
 }
 
 function timeLabel(ev, lang) {
+  if (ev.timeText) return ev.timeText[lang];
   if (!ev.timeStart) return null;
   const z = tzLabel(ev.start);
   const fmt = (t) => (lang === "nl" ? t.replace(":", ".") : lang === "fr" ? t.replace(":", "h") : t);
@@ -115,6 +117,10 @@ function languageLabel(ev, lang) {
   return L[lang].unknown;
 }
 
+// Pas de fichier .ics quand la date est trop imprécise, explicitement désactivée,
+// ou quand l'événement est une série récurrente dont on ne connaît pas toutes les séances.
+const hasIcs = (ev) => !(ev.ics === false || ev.ongoing || ev.datePrecision === "month");
+
 const esc = (s) => String(s == null ? "" : s)
   .replace(/&/g, "&amp;").replace(/</g, "&lt;").replace(/>/g, "&gt;")
   .replace(/"/g, "&quot;").replace(/'/g, "&#x27;");
@@ -129,8 +135,8 @@ function island() {
       id: ev.id, title: ev.title, titleOfficial: ev.titleOfficial,
       track: ev.track, theme: ev.theme, format: ev.format,
       start: ev.start, end: ev.end, url: ev.url,
-      registration: ev.registration, provisional: !!ev.provisional,
-      ics: (ev.ics === false || ev.datePrecision === "month") ? null : `e/${ev.id}.ics`,
+      registration: ev.registration, provisional: !!ev.provisional, ongoing: !!ev.ongoing,
+      ics: hasIcs(ev) ? `e/${ev.id}.ics` : null,
       page: `e/${ev.id}.html`, t: {}
     };
     for (const lang of LANGS) {
@@ -174,10 +180,10 @@ function card(ev) {
   rows.push(`          <div><dt data-i18n="l_lang">${fr.lang}</dt><dd data-f="language">${esc(languageLabel(ev, "fr"))}</dd></div>`);
   if (ev.deadline) rows.push(`          <div><dt data-i18n="l_deadline">${fr.deadline}</dt><dd data-f="deadline">${esc(ev.deadline.fr)}</dd></div>`);
 
-  const icsBtn = (ev.ics === false || ev.datePrecision === "month") ? "" :
+  const icsBtn = !hasIcs(ev) ? "" :
     `\n          <a class="btn btn-ghost btn-sm" href="e/${ev.id}.ics" download data-f="ics">${fr.ics}</a>`;
 
-  return `      <article class="card" id="${ev.id}" data-start="${ev.start}" data-end="${ev.end}" data-track="${ev.track}" data-fmt="${ev.format}" data-theme="${ev.theme}" data-reg="${ev.registration}">
+  return `      <article class="card" id="${ev.id}" data-start="${ev.start}" data-end="${ev.end}"${ev.ongoing ? ' data-ongoing="true"' : ""} data-track="${ev.track}" data-fmt="${ev.format}" data-theme="${ev.theme}" data-reg="${ev.registration}">
         <div class="card-top">
           <span class="chip ${chipClass}" data-f="track">${esc(trackLabel)}</span>
           <span class="chip chip-fmt" data-f="format">${esc(ev.format === "online" ? fr.online : fr.onsite)}</span>${
@@ -224,7 +230,7 @@ function addDays(dateStr, n) {
 }
 
 function ics(ev) {
-  if (ev.ics === false || ev.datePrecision === "month") return null;
+  if (!hasIcs(ev)) return null;
   const lines = [
     "BEGIN:VCALENDAR", "VERSION:2.0",
     "PRODID:-//Microsoft Belux Higher Education Calendar//FR",
@@ -280,7 +286,7 @@ function eventPage(ev) {
     "@context": "https://schema.org", "@type": "Event",
     name: ev.titleOfficial,
     startDate: ev.timeStart ? `${ev.start}T${ev.timeStart}:00${offset(ev.start)}` : ev.start,
-    endDate: ev.timeEnd ? `${ev.end}T${ev.timeEnd}:00${offset(ev.end)}` : ev.end,
+    ...(ev.ongoing ? {} : { endDate: ev.timeEnd ? `${ev.end}T${ev.timeEnd}:00${offset(ev.end)}` : ev.end }),
     eventAttendanceMode: ev.format === "online"
       ? "https://schema.org/OnlineEventAttendanceMode"
       : "https://schema.org/OfflineEventAttendanceMode",
@@ -381,7 +387,7 @@ footer{margin-block-start:26px;font-size:.9rem;color:var(--text-soft)}
     </dl>
     <div class="actions">
       <a class="btn" href="${esc(ev.url)}" data-f="cta">${esc(ctaLabel(ev, "fr"))}</a>${
-    (ev.ics === false || ev.datePrecision === "month") ? "" : `
+    (!hasIcs(ev)) ? "" : `
       <a class="btn btn-ghost" href="${ev.id}.ics" download data-f="ics">${L.fr.ics}</a>`}
     </div>
   </article>

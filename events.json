@@ -404,6 +404,52 @@
       }
     },
     {
+      "id": "ev-ai-skilling-sessions",
+      "title": "Microsoft AI Skilling Sessions | Public Sector Belgium",
+      "titleOfficial": "Microsoft AI Skilling Sessions | Public Sector Belgium",
+      "track": "General",
+      "theme": "copilot",
+      "format": "online",
+      "start": "2026-10-15",
+      "end": "2026-10-15",
+      "ongoing": true,
+      "dateText": {
+        "fr": "Un jeudi par mois — première séance le 15 octobre 2026",
+        "nl": "Maandelijks op donderdag — eerste sessie op 15 oktober 2026",
+        "en": "Monthly on Thursdays — first session on 15 October 2026"
+      },
+      "timeText": {
+        "fr": "Session en français : 9h00-10h00 · session en néerlandais : 10h00-11h00 (heure de Bruxelles)",
+        "nl": "Franstalige sessie: 9.00-10.00 · Nederlandstalige sessie: 10.00-11.00 (Brusselse tijd)",
+        "en": "French session: 09:00-10:00 · Dutch session: 10:00-11:00 (Brussels time)"
+      },
+      "datePrecision": "day",
+      "ics": false,
+      "registration": "open",
+      "url": "https://forms.cloud.microsoft/r/W3YtZSysd2",
+      "language": {
+        "fr": "Français ou néerlandais, au choix",
+        "nl": "Frans of Nederlands, naar keuze",
+        "en": "French or Dutch, your choice"
+      },
+      "verified": "2026-10-09",
+      "venue": {
+        "fr": "En ligne (webinaire mensuel)",
+        "nl": "Online (maandelijks webinar)",
+        "en": "Online (monthly webinar)"
+      },
+      "audience": {
+        "fr": "Personnel du secteur public belge disposant d'une licence Copilot",
+        "nl": "Medewerkers van de Belgische publieke sector met een Copilot-licentie",
+        "en": "Belgian public sector staff with a Copilot licence"
+      },
+      "benefit": {
+        "fr": "Un webinaire mensuel pour utiliser Copilot, Cowork et les agents au quotidien : démonstrations pratiques, cas d'usage concrets et astuces à appliquer immédiatement, avec les partenaires de confiance de Microsoft.",
+        "nl": "Een maandelijks webinar om Copilot, Cowork en agents dagelijks in te zetten: praktische demonstraties, herkenbare praktijkvoorbeelden en tips en tricks die je meteen kunt toepassen, samen met de trusted partners van Microsoft.",
+        "en": "A monthly webinar on using Copilot, Cowork and agents in everyday work: practical demos, relatable examples and tips and tricks you can apply immediately, with Microsoft's trusted partners."
+      }
+    },
+    {
       "id": "ev-mbrc-cambridge",
       "title": "Research Executive Briefing — Cambridge (UK)",
       "titleOfficial": "Research Executive Briefing (Cambridge, UK)",
