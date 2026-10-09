@@ -456,8 +456,8 @@
       "track": "Research",
       "theme": "research",
       "format": "onsite",
-      "start": "2026-11-16",
-      "end": "2026-11-20",
+      "start": "2026-11-18",
+      "end": "2026-11-19",
       "timeStart": null,
       "timeEnd": null,
       "datePrecision": "range",
@@ -470,7 +470,7 @@
         "nl": "Engels",
         "en": "English"
       },
-      "verified": "2026-09-09",
+      "verified": "2026-10-09",
       "venue": {
         "fr": "Cambridge (Royaume-Uni)",
         "nl": "Cambridge (VK)",
@@ -482,9 +482,9 @@
         "en": "VPs of R&D, chief scientists, research directors, research strategy and advanced computing decision-makers"
       },
       "benefit": {
-        "fr": "Événement de 2 jours, dates finales à confirmer dans cette fenêtre. Réception et dîner de direction le premier soir, puis briefing exécutif sur l'IA, le calcul avancé et la découverte scientifique, la vision et la roadmap Microsoft, et des échanges avec le consortium de recherche de Cambridge.",
-        "nl": "Tweedaags event, definitieve datums nog te bevestigen binnen dit venster. Netwerkreceptie en diner voor directieleden op de eerste avond, gevolgd door een executive briefing over AI, advanced computing en wetenschappelijke ontdekking, de Microsoft-visie en -roadmap, en gesprekken met het onderzoeksconsortium van Cambridge.",
-        "en": "Two-day event, final dates to be confirmed within this window. Executive networking reception and dinner on the first evening, followed by an executive briefing on AI, advanced computing and scientific discovery, Microsoft vision and roadmap, and discussions with the Cambridge research consortium."
+        "fr": "Événement de 2 jours, les 18 et 19 novembre 2026. Réception et dîner de direction le premier soir, puis briefing exécutif sur l'IA, le calcul avancé et la découverte scientifique, la vision et la roadmap Microsoft, et des échanges avec le consortium de recherche de Cambridge.",
+        "nl": "Tweedaags event, op 18 en 19 november 2026. Netwerkreceptie en diner voor directieleden op de eerste avond, gevolgd door een executive briefing over AI, advanced computing en wetenschappelijke ontdekking, de Microsoft-visie en -roadmap, en gesprekken met het onderzoeksconsortium van Cambridge.",
+        "en": "Two-day event, 18–19 November 2026. Executive networking reception and dinner on the first evening, followed by an executive briefing on AI, advanced computing and scientific discovery, Microsoft vision and roadmap, and discussions with the Cambridge research consortium."
       }
     },
     {
