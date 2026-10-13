@@ -34,339 +34,14 @@
       "fr": "Recherche",
       "nl": "Onderzoek",
       "en": "Research"
+    },
+    "security": {
+      "fr": "Sécurité",
+      "nl": "Beveiliging",
+      "en": "Security"
     }
   },
   "events": [
-    {
-      "id": "ev-agentic-governance",
-      "title": "Agentic Governance Workshop",
-      "titleOfficial": "Agentic Governance Workshop",
-      "track": "General",
-      "theme": "ai",
-      "format": "onsite",
-      "start": "2026-09-10",
-      "end": "2026-09-10",
-      "timeStart": "10:00",
-      "timeEnd": "15:00",
-      "datePrecision": "day",
-      "registration": "closed",
-      "url": "https://msevents.microsoft.com/event?id=2107904893",
-      "language": {
-        "fr": "Anglais",
-        "nl": "Engels",
-        "en": "English"
-      },
-      "verified": "2026-09-09",
-      "venue": {
-        "fr": "Microsoft Office, Zaventem",
-        "nl": "Microsoft Office, Zaventem",
-        "en": "Microsoft Office, Zaventem"
-      },
-      "audience": {
-        "fr": "Profils développement, ingénierie IA, data science et architecture de solutions",
-        "nl": "Developers, AI engineers, data scientists, solution architects",
-        "en": "Developers, AI engineers, data scientists, solution architects"
-      },
-      "benefit": {
-        "fr": "Bonnes pratiques de gouvernance de l'IA en entreprise, conception d'agents sécurisés et conformes, et modèles d'architecture pour passer à l'échelle.",
-        "nl": "Best practices voor AI-governance in de onderneming, het bouwen van veilige en compliant agents, en architectuurpatronen om op te schalen.",
-        "en": "Best practices for enterprise AI governance, building secure and compliant agents, and architectural patterns for scaling AI."
-      }
-    },
-    {
-      "id": "ev-copilot-delaware",
-      "title": "M365 Copilot Partner Introduction | Delaware",
-      "titleOfficial": "Higher Education Belgium: M365 Copilot Partner Introduction | Delaware",
-      "track": "General",
-      "theme": "copilot",
-      "format": "online",
-      "start": "2026-09-15",
-      "end": "2026-09-15",
-      "timeStart": "14:00",
-      "timeEnd": "15:00",
-      "datePrecision": "day",
-      "registration": "open",
-      "url": "https://msit.events.teams.microsoft.com/event/msit.a16f7c31-fd0a-41e0-a278-02bd3a878c88@72f988bf-86f1-41af-91ab-2d7cd011db47",
-      "language": {
-        "fr": "Anglais",
-        "nl": "Engels",
-        "en": "English"
-      },
-      "verified": "2026-09-09",
-      "venue": {
-        "fr": "En ligne (Microsoft Teams Webinar)",
-        "nl": "Online (Microsoft Teams Webinar)",
-        "en": "Online (Microsoft Teams Webinar)"
-      },
-      "audience": {
-        "fr": "Enseignement supérieur — responsables IT & métier",
-        "nl": "Hoger onderwijs — IT- en business-beslissers",
-        "en": "Higher education — IT & business decision-makers"
-      },
-      "benefit": {
-        "fr": "Passer de pilotes IA isolés à une transformation à l'échelle : la vision de Delaware pour l'enseignement supérieur, son approche de l'adoption de Copilot et de la conduite du changement.",
-        "nl": "Van geïsoleerde AI-pilots naar transformatie op schaal: de visie van Delaware op hoger onderwijs, hun aanpak van Copilot-adoptie en verandermanagement.",
-        "en": "Move from isolated AI pilots to transformation at scale: Delaware's vision for higher education, their approach to Copilot adoption and change management."
-      }
-    },
-    {
-      "id": "ev-copilot-appfie",
-      "title": "M365 Copilot Partner Introduction | Appfie",
-      "titleOfficial": "Higher Education Belgium: M365 Copilot Partner Introduction | Appfie",
-      "track": "General",
-      "theme": "copilot",
-      "format": "online",
-      "start": "2026-09-17",
-      "end": "2026-09-17",
-      "timeStart": "14:00",
-      "timeEnd": "15:00",
-      "datePrecision": "day",
-      "registration": "open",
-      "url": "https://msit.events.teams.microsoft.com/event/msit.6fb7b641-4ab7-45ad-8596-26bda0131910@72f988bf-86f1-41af-91ab-2d7cd011db47",
-      "language": {
-        "fr": "Anglais",
-        "nl": "Engels",
-        "en": "English"
-      },
-      "verified": "2026-09-09",
-      "venue": {
-        "fr": "En ligne (Microsoft Teams Webinar)",
-        "nl": "Online (Microsoft Teams Webinar)",
-        "en": "Online (Microsoft Teams Webinar)"
-      },
-      "audience": {
-        "fr": "Enseignement supérieur — responsables IT & métier",
-        "nl": "Hoger onderwijs — IT- en business-beslissers",
-        "en": "Higher education — IT & business decision-makers"
-      },
-      "benefit": {
-        "fr": "Passer de pilotes IA isolés à une transformation à l'échelle : la vision d'Appfie pour l'enseignement supérieur, son approche de l'adoption de Copilot et de la conduite du changement.",
-        "nl": "Van geïsoleerde AI-pilots naar transformatie op schaal: de visie van Appfie op hoger onderwijs, hun aanpak van Copilot-adoptie en verandermanagement.",
-        "en": "Move from isolated AI pilots to transformation at scale: Appfie's vision for higher education, their approach to Copilot adoption and change management."
-      }
-    },
-    {
-      "id": "ev-copilot-cronos",
-      "title": "M365 Copilot Partner Introduction | Cronos Group",
-      "titleOfficial": "Higher Education Belgium: M365 Copilot Partner Introduction | Cronos Group",
-      "track": "General",
-      "theme": "copilot",
-      "format": "online",
-      "start": "2026-09-22",
-      "end": "2026-09-22",
-      "timeStart": "14:00",
-      "timeEnd": "15:00",
-      "datePrecision": "day",
-      "registration": "open",
-      "url": "https://msit.events.teams.microsoft.com/event/msit.fc3fac9a-286a-4994-bc32-f320cbb59ba6@72f988bf-86f1-41af-91ab-2d7cd011db47",
-      "language": {
-        "fr": "Anglais",
-        "nl": "Engels",
-        "en": "English"
-      },
-      "verified": "2026-09-09",
-      "venue": {
-        "fr": "En ligne (Microsoft Teams Webinar)",
-        "nl": "Online (Microsoft Teams Webinar)",
-        "en": "Online (Microsoft Teams Webinar)"
-      },
-      "audience": {
-        "fr": "Enseignement supérieur — responsables IT & métier",
-        "nl": "Hoger onderwijs — IT- en business-beslissers",
-        "en": "Higher education — IT & business decision-makers"
-      },
-      "benefit": {
-        "fr": "Passer de pilotes IA isolés à une transformation à l'échelle : la vision du Cronos Group pour l'enseignement supérieur, son approche de l'adoption de Copilot et de la conduite du changement.",
-        "nl": "Van geïsoleerde AI-pilots naar transformatie op schaal: de visie van de Cronos Group op hoger onderwijs, hun aanpak van Copilot-adoptie en verandermanagement.",
-        "en": "Move from isolated AI pilots to transformation at scale: the Cronos Group's vision for higher education, their approach to Copilot adoption and change management."
-      }
-    },
-    {
-      "id": "ev-copilot-keyes",
-      "title": "M365 Copilot Partner Introduction | Keyes",
-      "titleOfficial": "Higher Education Belgium: M365 Copilot Partner Introduction | Keyes",
-      "track": "General",
-      "theme": "copilot",
-      "format": "online",
-      "start": "2026-09-23",
-      "end": "2026-09-23",
-      "timeStart": "15:00",
-      "timeEnd": "16:00",
-      "datePrecision": "day",
-      "registration": "open",
-      "url": "https://msit.events.teams.microsoft.com/event/msit.4896abe2-89db-4b3f-93c4-fec61915a84c@72f988bf-86f1-41af-91ab-2d7cd011db47",
-      "language": {
-        "fr": "Français et anglais",
-        "nl": "Frans en Engels",
-        "en": "French and English"
-      },
-      "verified": "2026-09-09",
-      "venue": {
-        "fr": "En ligne (Microsoft Teams Webinar)",
-        "nl": "Online (Microsoft Teams Webinar)",
-        "en": "Online (Microsoft Teams Webinar)"
-      },
-      "audience": {
-        "fr": "Enseignement supérieur — responsables IT & métier",
-        "nl": "Hoger onderwijs — IT- en business-beslissers",
-        "en": "Higher education — IT & business decision-makers"
-      },
-      "benefit": {
-        "fr": "Passer de pilotes IA isolés à une transformation à l'échelle : la vision de Keyes pour l'enseignement supérieur, son approche de l'adoption de Copilot et de la conduite du changement.",
-        "nl": "Van geïsoleerde AI-pilots naar transformatie op schaal: de visie van Keyes op hoger onderwijs, hun aanpak van Copilot-adoptie en verandermanagement.",
-        "en": "Move from isolated AI pilots to transformation at scale: Keyes' vision for higher education, their approach to Copilot adoption and change management."
-      }
-    },
-    {
-      "id": "ev-copilot-academic-software",
-      "title": "M365 Copilot Partner Introduction | Academic Software",
-      "titleOfficial": "Higher Education Belgium: M365 Copilot Partner Introduction | Academic Software",
-      "track": "General",
-      "theme": "copilot",
-      "format": "online",
-      "start": "2026-09-24",
-      "end": "2026-09-24",
-      "timeStart": "14:00",
-      "timeEnd": "15:00",
-      "datePrecision": "day",
-      "registration": "open",
-      "url": "https://msit.events.teams.microsoft.com/event/msit.b7cc2218-c3cd-4f69-98da-6730e1bfdfea@72f988bf-86f1-41af-91ab-2d7cd011db47",
-      "language": {
-        "fr": "Anglais",
-        "nl": "Engels",
-        "en": "English"
-      },
-      "verified": "2026-09-09",
-      "venue": {
-        "fr": "En ligne (Microsoft Teams Webinar)",
-        "nl": "Online (Microsoft Teams Webinar)",
-        "en": "Online (Microsoft Teams Webinar)"
-      },
-      "audience": {
-        "fr": "Enseignement supérieur — responsables IT & métier",
-        "nl": "Hoger onderwijs — IT- en business-beslissers",
-        "en": "Higher education — IT & business decision-makers"
-      },
-      "benefit": {
-        "fr": "Passer de pilotes IA isolés à une transformation à l'échelle : la vision d'Academic Software pour l'enseignement supérieur, son approche de l'adoption de Copilot et de la conduite du changement.",
-        "nl": "Van geïsoleerde AI-pilots naar transformatie op schaal: de visie van Academic Software op hoger onderwijs, hun aanpak van Copilot-adoptie en verandermanagement.",
-        "en": "Move from isolated AI pilots to transformation at scale: Academic Software's vision for higher education, their approach to Copilot adoption and change management."
-      }
-    },
-    {
-      "id": "ev-mbrc-agentic-ai",
-      "title": "Agentic AI Hackathon for Research",
-      "titleOfficial": "Agentic AI Hackathon for Research",
-      "track": "Research",
-      "theme": "research",
-      "format": "onsite",
-      "start": "2026-09-29",
-      "end": "2026-09-30",
-      "timeStart": "09:00",
-      "timeEnd": "17:00",
-      "datePrecision": "range",
-      "registration": "contact",
-      "url": "mailto:anothomb@microsoft.com?cc=splace@microsoft.com,joclaes@microsoft.com&subject=Agentic%20AI%20Hackathon%20for%20Research%20-%2029-30%20septembre%202026",
-      "language": {
-        "fr": "Anglais",
-        "nl": "Engels",
-        "en": "English"
-      },
-      "deadline": {
-        "fr": "Clôture des candidatures annoncée au 31 août 2026 — contactez Antoinette Nothomb, responsable de l'événement, pour savoir si une place reste disponible",
-        "nl": "Aangekondigde deadline voor kandidaturen: 31 augustus 2026 — contacteer Antoinette Nothomb, verantwoordelijke voor het event, om te weten of er nog een plaats vrij is",
-        "en": "Submissions announced as closing on 31 August 2026 — contact Antoinette Nothomb, the event owner, to check whether a place is still available"
-      },
-      "verified": "2026-09-09",
-      "venue": {
-        "fr": "Microsoft Office, Zaventem",
-        "nl": "Microsoft Office, Zaventem",
-        "en": "Microsoft Office, Zaventem"
-      },
-      "audience": {
-        "fr": "Responsables de recherche, équipes IT et plateformes de recherche, profils data/IA, responsables innovation",
-        "nl": "Onderzoeksverantwoordelijken, onderzoeks-IT en -platformen, data-/AI-engineers, innovatieverantwoordelijken",
-        "en": "Research leaders, research IT and platform teams, data/AI engineers, innovation leads"
-      },
-      "benefit": {
-        "fr": "Deux jours pour transformer un vrai défi de recherche en prototype fonctionnel, avec GitHub Copilot, Copilot Studio et Azure AI. Chaque institution vient avec une équipe pluridisciplinaire de 4 à 5 personnes, accompagnée par l'ingénierie Microsoft et des spécialistes partenaires.",
-        "nl": "Twee dagen om een echte onderzoeksuitdaging om te zetten in een werkend prototype, met GitHub Copilot, Copilot Studio en Azure AI. Elke instelling komt met een multidisciplinair team van 4 à 5 personen, aangevuld met Microsoft-engineers en partnercoaches.",
-        "en": "Two days to turn a real research challenge into a working prototype using GitHub Copilot, Copilot Studio and Azure AI. Each institution brings a multidisciplinary team of 4 to 5 people, joined by Microsoft engineers and partner coaches."
-      },
-      "infoUrl": "https://forms.cloud.microsoft/pages/responsepage.aspx?id=v4j5cvGGr0GRqy180BHbRzD5QF-pWZtEsoCEiWYHSHRUNVk3U1o2UDQ1ODhXUUlaNjhRRUtQUzVZRS4u&origin=lprLink&route=shorturl"
-    },
-    {
-      "id": "ev-azure-programs",
-      "title": "Azure Cloud and AI Platform: Programs, Benefits and Funding Options",
-      "titleOfficial": "Azure Cloud and AI Platform : Programs, Benefits and Funding Options",
-      "track": "General",
-      "theme": "cloud",
-      "format": "online",
-      "start": "2026-09-29",
-      "end": "2026-09-29",
-      "timeStart": "11:00",
-      "timeEnd": null,
-      "datePrecision": "day",
-      "registration": "open",
-      "url": "https://msit.events.teams.microsoft.com/event/msit.b9b5d397-1989-48d0-b890-ed7639cc8d81@72f988bf-86f1-41af-91ab-2d7cd011db47",
-      "language": {
-        "fr": "Anglais",
-        "nl": "Engels",
-        "en": "English"
-      },
-      "verified": "2026-09-09",
-      "venue": {
-        "fr": "En ligne (Microsoft Teams Webinar)",
-        "nl": "Online (Microsoft Teams Webinar)",
-        "en": "Online (Microsoft Teams Webinar)"
-      },
-      "audience": {
-        "fr": "Responsables IT & Cloud/IA",
-        "nl": "IT- en Cloud/AI-beslissers",
-        "en": "IT & Cloud/AI decision-makers"
-      },
-      "benefit": {
-        "fr": "Les programmes, offres de financement et accélérateurs Azure pour les projets cloud et IA de l'enseignement supérieur et de la recherche, dont Frontier Accelerate et la Cloud Accelerate Factory.",
-        "nl": "De Azure-programma's, financieringsaanbiedingen en accelerators voor cloud- en AI-projecten in hoger onderwijs en onderzoek, waaronder Frontier Accelerate en de Cloud Accelerate Factory.",
-        "en": "Azure programs, funding offers and accelerators for higher education and research cloud and AI projects, including Frontier Accelerate and the Cloud Accelerate Factory."
-      }
-    },
-    {
-      "id": "ev-fabric-roadshow",
-      "title": "Microsoft Fabric Roadshow Brussels",
-      "titleOfficial": "Microsoft Fabric Roadshow Brussels",
-      "track": "General",
-      "theme": "data",
-      "format": "onsite",
-      "start": "2026-10-08",
-      "end": "2026-10-08",
-      "timeStart": "09:00",
-      "timeEnd": "18:00",
-      "datePrecision": "day",
-      "registration": "open",
-      "url": "https://msevents.microsoft.com/event?id=58643712",
-      "language": {
-        "fr": "Anglais",
-        "nl": "Engels",
-        "en": "English"
-      },
-      "verified": "2026-09-09",
-      "venue": {
-        "fr": "Microsoft Office, Zaventem",
-        "nl": "Microsoft Office, Zaventem",
-        "en": "Microsoft Office, Zaventem"
-      },
-      "audience": {
-        "fr": "CxO, CDO, responsables data & analytics, profils data engineering",
-        "nl": "CxO's, CDO's, data- & analyticsverantwoordelijken, data engineers",
-        "en": "CxOs, CDOs, data & analytics leads, data engineers"
-      },
-      "benefit": {
-        "fr": "Découvrir Microsoft Fabric et la Real-Time Intelligence avec les spécialistes et MVP de la communauté locale, en deux parcours parallèles : métier et technique.",
-        "nl": "Microsoft Fabric en Real-Time Intelligence ontdekken met lokale experts en MVP's, in twee parallelle tracks: business en technisch.",
-        "en": "Discover Microsoft Fabric and Real-Time Intelligence with local experts and MVPs, across two parallel tracks: business and technical."
-      }
-    },
     {
       "id": "ev-azure-modernization-hack",
       "title": "Microsoft Azure Modernization Hack",
@@ -666,6 +341,42 @@
         "fr": "Découvrir les options de souveraineté numérique proposées par Microsoft aux clients européens.",
         "nl": "De opties voor digitale soevereiniteit ontdekken die Microsoft aan Europese klanten biedt.",
         "en": "Discover the digital sovereignty options Microsoft offers European customers."
+      }
+    },
+    {
+      "id": "ev-security-frontier-day",
+      "title": "Security Frontier Transformation Day",
+      "titleOfficial": "Security Frontier Transformation Day",
+      "theme": "security",
+      "track": "General",
+      "format": "onsite",
+      "timeStart": "09:00",
+      "timeEnd": "17:00",
+      "datePrecision": "day",
+      "language": {
+        "fr": "Anglais",
+        "nl": "Engels",
+        "en": "English"
+      },
+      "verified": "2026-10-13",
+      "venue": {
+        "fr": "The Mix, Bruxelles",
+        "nl": "The Mix, Brussel",
+        "en": "The Mix, Brussels"
+      },
+      "start": "2026-11-26",
+      "end": "2026-11-26",
+      "registration": "open",
+      "url": "https://msevents.microsoft.com/event?id=1957425448",
+      "audience": {
+        "fr": "RSSI et direction sécurité, responsables transformation IA et digitale, conformité et risques, stratèges technologiques",
+        "nl": "CISO's en security-executives, AI- en digitale-transformatieleiders, compliance- en risicoverantwoordelijken, technologiestrategen",
+        "en": "CISOs and security executives, AI and digital transformation leaders, risk and compliance professionals, technology strategists"
+      },
+      "benefit": {
+        "fr": "Comprendre comment la sécurité sert de socle à l'IA : modèles d'affaires portés par l'IA, stratégie de sécurité intégrée centrée sur les données, confiance et conformité.",
+        "nl": "Begrijpen hoe beveiliging de basis vormt voor AI: AI-gedreven businessmodellen, geïntegreerde datagerichte beveiligingsstrategie, vertrouwen en compliance.",
+        "en": "See how security underpins AI: AI-powered business models, an integrated data-centred security strategy, and the link between trust and compliance."
       }
     }
   ]

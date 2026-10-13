@@ -1,0 +1,23 @@
+BEGIN:VCALENDAR
+VERSION:2.0
+PRODID:-//Microsoft Belux Higher Education Calendar//FR
+CALSCALE:GREGORIAN
+METHOD:PUBLISH
+BEGIN:VEVENT
+UID:ev-security-frontier-day@sebplace.github.io
+DTSTAMP:20260909T120000Z
+DTSTART:20261126T080000Z
+DTEND:20261126T160000Z
+SUMMARY:Security Frontier Transformation Day
+DESCRIPTION:Comprendre comment la sécurité sert de socle à l'IA : mod
+ èles d'affaires portés par l'IA\, stratégie de sécurité intégrée 
+ centrée sur les données\, confiance et conformité.\n\nPublic : RSSI e
+ t direction sécurité\, responsables transformation IA et digitale\, co
+ nformité et risques\, stratèges technologiques\n\nPlus d'informations 
+ : https://msevents.microsoft.com/event?id=1957425448\n\nhttps://sebplace
+ .github.io/belux-higher-ed-calendar-2026-2027/#ev-security-frontier-day
+LOCATION:The Mix\, Bruxelles
+URL:https://msevents.microsoft.com/event?id=1957425448
+STATUS:CONFIRMED
+END:VEVENT
+END:VCALENDAR

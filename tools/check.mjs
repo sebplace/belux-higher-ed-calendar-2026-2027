@@ -47,8 +47,8 @@ async function newPage(opts = {}) {
     return page.locator("#grid .card:not(.is-hidden), #archive-grid .card:not(.is-hidden)").count();
   };
   atLeast("recherche sans accent « superieur »", await q("superieur"), 1);
-  check("recherche multi-mots « copilot delaware »", await q("copilot delaware"), 1);
-  check("recherche multi-mots « fabric zaventem »", await q("fabric zaventem"), 1);
+  check("recherche multi-mots « dynamics student »", await q("dynamics student"), 1);
+  check("recherche multi-mots « security brussels »", await q("security brussels"), 1);
   atLeast("recherche « presentiel »", await q("presentiel"), 1);
   atLeast("recherche néerlandaise « onderzoek »", await q("onderzoek"), 1);
   check("recherche sans résultat", await q("zzzz"), 0);
